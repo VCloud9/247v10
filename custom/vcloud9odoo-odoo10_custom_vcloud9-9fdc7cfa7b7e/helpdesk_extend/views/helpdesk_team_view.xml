@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    
+    <record id="helpdesk_team_view_form_inherit_teamtype" model="ir.ui.view">
+        <field name="name">helpdesk.team.inherit.team_type</field>
+        <field name="model">helpdesk.team</field>
+        <field name="inherit_id" ref="helpdesk.helpdesk_team_view_form"/>
+        <field name="arch" type="xml">
+            <field name="company_id" position="after">
+                <div class="oe_title">
+                     <field name="team_type"/>
+                </div >
+            </field>
+        </field>
+    </record>
+    
+    <record id="helpdesk_team_view_tree_inherit_teamtype" model="ir.ui.view">
+        <field name="name">helpdesk.team.inherit.team_type</field>
+        <field name="model">helpdesk.team</field>
+        <field name="inherit_id" ref="helpdesk.helpdesk_team_view_tree"/>
+        <field name="arch" type="xml">
+            <field name="name" position="after">
+                <field name="team_type"/>
+            </field>
+        </field>
+    </record>
+    
+    
+<!--    <menuitem id="helpdesk.helpdesk_menu_team_dashboard" action="helpdesk.helpdesk_team_dashboard_action_main"
+        sequence="5" parent="helpdesk.menu_helpdesk_root"
+        groups="helpdesk.group_helpdesk_user,group_helpdesk_own_ticket"/>
+    
+    <menuitem id="helpdesk.menu_helpdesk_root" name="Helpdesk"
+        sequence="25"
+        web_icon="helpdesk,static/description/icon.png"
+        groups="helpdesk.group_helpdesk_user,group_helpdesk_own_ticket"/>   -->
+    
+</odoo>

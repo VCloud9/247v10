@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<odoo>
+    <record id="helpdesk_cause_action" model="ir.actions.act_window">
+        <field name="name">Causes</field>
+        <field name="res_model">helpdesk.cause</field>
+        <field name="view_type">form</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="oe_view_nocontent_create">Click create a new cause.</p>
+        </field>
+    </record>
+    
+    <record id="helpdesk_cause_view_tree" model="ir.ui.view">
+        <field name="name">helpdesk.cause.tree</field>
+        <field name="model">helpdesk.cause</field>
+        <field name="arch" type="xml">
+            <tree editable="top" string="Tag">
+                <field name="name"/>
+            </tree>
+        </field>
+    </record>
+    
+    <menuitem id="helpdesk_cause_menu" action="helpdesk_cause_action" sequence="3" parent="helpdesk.helpdesk_menu_config"
+        groups="base.group_no_one"/>
+</odoo>

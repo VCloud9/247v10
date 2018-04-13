@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <template id="helpdesk_extend_report_inherit" inherit_id="helpdesk_extend.helpdesk_extend_report">
+            <xpath expr="//div/div[3]/div[2]" position="after">
+                <div class="row" t-if="doc.v_helpdesk_group">
+                    <div class="col-xs-3">
+                        <strong>Helpdesk Group:</strong>
+                    </div>
+                    <div class="col-xs-3">
+                        <span t-field="doc.v_helpdesk_group"/>
+                    </div>
+                </div>
+            </xpath>
+        </template>
+        
+    </data>
+</odoo>

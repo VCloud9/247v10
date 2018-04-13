@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record model="helpdesk.reported.issues" id="alarm_issue_reported_issues">
+          <field name="name">Alarm Issu</field>
+        </record>
+        <record model="helpdesk.reported.issues" id="annunciator_sensor_reported_issues_reported_issues">
+          <field name="name">Annunciator Sensor</field>
+        </record>
+        <record model="helpdesk.reported.issues" id="audio_video_call_reported_issues">
+          <field name="name">Audio / Video Call</field>
+        </record>
+        <record model="helpdesk.reported.issues" id="audio_cutting_out_reported_issues">
+          <field name="name">Audio cutting out</field>
+        </record>
+        <record model="helpdesk.reported.issues" id="audio_has_static_reported_issues">
+          <field name="name">Audio Has Static</field>
+        </record>
+        <record model="helpdesk.reported.issues" id="audio_is_low_reported_issues">
+          <field name="name">Audio is Low</field>
+        </record>
+        <record model="helpdesk.reported.issues" id="blowers_keep_cycling_reported_issues">
+          <field name="name">Blowers Keep Cycling</field>
+        </record>
+        <record model="helpdesk.reported.issues" id="call_button_not_work_reported_issues">
+          <field name="name">Call Button Not Work</field>
+        </record>
+        <record model="helpdesk.reported.issues" id="call_cancelled_reported_issues">
+          <field name="name">Call Cancelled</field>
+        </record>
+        <record model="helpdesk.reported.issues" id="carrier_hangs_up_reported_issues">
+          <field name="name">Carrier Hangs Up</field>
+        </record>
+        <record model="helpdesk.reported.issues" id="carrier_not_recall_reported_issues">
+          <field name="name">Carrier Not Recall</field>
+        </record>
+        <record model="helpdesk.reported.issues" id="carrier_not_sending_reported_issues">
+          <field name="name">Carrier Not Sending</field>
+        </record>
+        <record model="helpdesk.reported.issues" id="carrier_order_reported_issues">
+          <field name="name">Carrier Order</field>
+        </record>
+        <record model="helpdesk.reported.issues" id="carrier_travels_slow_reported_issues">
+          <field name="name">Carrier Travels Slow</field>
+        </record>
+        <record model="helpdesk.reported.issues" id="combo_change_request_reported_issues">
+          <field name="name">Combo Change Request</field>
+        </record>
+        <record model="helpdesk.reported.issues" id="door_not_closing_reported_issues">
+          <field name="name">Door Not Closing</field>
+        </record>
+        <record model="helpdesk.reported.issues" id="door_not_opening_reported_issues">
+          <field name="name">Door Not Opening</field>
+        </record>
+        <record model="helpdesk.reported.issues" id="dvr_reported_issues">
+          <field name="name">DVR</field>
+        </record>
+        <record model="helpdesk.reported.issues" id="heater_not_working_reported_issues">
+          <field name="name">Heater not working</field>
+        </record>
+        <record model="helpdesk.reported.issues" id="installation_job_reported_issues">
+          <field name="name">Installation Job</field>
+        </record>
+        <record model="helpdesk.reported.issues" id="issue_with_remote_reported_issues">
+          <field name="name">Issue With Remote</field>
+        </record>
+        <record model="helpdesk.reported.issues" id="moisture_In_tube_reported_issues">
+          <field name="name">Moisture In Tube</field>
+        </record>
+        <record model="helpdesk.reported.issues" id="monitor_image_is_bad_reported_issues">
+          <field name="name">Monitor Image is Bad</field>
+        </record>
+        <record model="helpdesk.reported.issues" id="nd_head_pull_reported_issues">
+          <field name="name">ND Head Pull</field>
+        </record>
+        <record model="helpdesk.reported.issues" id="night_drop_reported_reported_issues">
+          <field name="name">Night Drop</field>
+        </record>
+        <record model="helpdesk.reported.issues" id="no_audio_reported_issues">
+          <field name="name">No Audio</field>
+        </record>
+        <record model="helpdesk.reported.issues" id="no_audio_or_video_reported_issues">
+          <field name="name">No Audio or Video</field>
+        </record>
+        <record model="helpdesk.reported.issues" id="no_overview_image_reported_issues">
+          <field name="name">No Overview Image</field>
+        </record>
+        <record model="helpdesk.reported.issues" id="no_video_reported_issues">
+          <field name="name">No Video</field>
+        </record>
+        <record model="helpdesk.reported.issues" id="odor_issue_reported_issues">
+          <field name="name">Odor Issue</field>
+        </record>
+        <record model="helpdesk.reported.issues" id="part_order_reported_issues">
+          <field name="name">Part Order</field>
+        </record>
+        <record model="helpdesk.reported.issues" id="prevent_maint_reported_issues">
+          <field name="name">Prevent Maint</field>
+        </record>
+        <record model="helpdesk.reported.issues" id="promo_video_failed_reported_issues">
+          <field name="name">Promo Video Failed</field>
+        </record>
+        <record model="helpdesk.reported.issues" id="referred_to_another_vendor_reported_issues">
+          <field name="name">Referred to another vendor</field>
+        </record>
+        <record model="helpdesk.reported.issues" id="send_button_not_work_reported_issues">
+          <field name="name">Send Button Not Work</field>
+        </record>
+        <record model="helpdesk.reported.issues" id="stuck_carrier_with_contents_reported_issues">
+          <field name="name">Stuck carrier with contents</field>
+        </record>
+        <record model="helpdesk.reported.issues" id="stuck_carrier_with_no_contents_reported_issues">
+          <field name="name">Stuck Carrier with no contents</field>
+        </record>
+        <record model="helpdesk.reported.issues" id="training_turnover_reported_issues">
+          <field name="name">Training &amp; Turnover</field>
+        </record>
+        <record model="helpdesk.reported.issues" id="undercounter_steel_reported_issues">
+          <field name="name">Undercounter Steel</field>
+        </record>
+        <record model="helpdesk.reported.issues" id="unit_hit_by_vehicle_reported_issues">
+          <field name="name">Unit Hit By Vehicle</field>
+        </record>
+        <record model="helpdesk.reported.issues" id="unit_vandalized_reported_issues">
+          <field name="name">Unit Vandalized</field>
+        </record>
+        <record model="helpdesk.reported.issues" id="vault_safe_reported_issues">
+          <field name="name">Vault - Safe</field>
+        </record>
+        <record model="helpdesk.reported.issues" id="vault_timelock_issue_reported_issues">
+          <field name="name">Vault Timelock Issue</field>
+        </record>
+        <record model="helpdesk.reported.issues" id="vault_safe_not_combo_reported_issues">
+          <field name="name">Vault/Safe NOT combo</field>
+        </record>
+        <record model="helpdesk.reported.issues" id="lock_issue_reported_issues">
+          <field name="name">Lock Issue</field>
+        </record>
+        <record model="helpdesk.reported.issues" id="key_duplication_reported_issues">
+          <field name="name">Key Duplication</field>
+        </record>
+        <record model="helpdesk.reported.issues" id="safe_deposit_box_drill_reported_issues">
+          <field name="name">Safe Deposit Box Drill</field>
+        </record>
+        <record model="helpdesk.reported.issues" id="safe_deposit_rotations_reported_issues">
+          <field name="name">Safe Deposit Rotations</field>
+        </record>
+        <record model="helpdesk.reported.issues" id="lost_combo_reported_issues">
+          <field name="name">Lost Combo</field>
+        </record>
+        <record model="helpdesk.reported.issues" id="cash_teller_locker_reported_issues">
+          <field name="name">Cash/Teller Locker</field>
+        </record>
+
+    </data>
+</odoo>

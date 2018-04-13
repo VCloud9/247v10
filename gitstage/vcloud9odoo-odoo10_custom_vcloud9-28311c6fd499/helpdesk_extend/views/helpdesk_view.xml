@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    
+    <record id="helpdesk_ticket_view_form_inherit" model="ir.ui.view">
+        <field name="name">helpdesk.ticket.form.inherit</field>
+        <field name="model">helpdesk.ticket</field>
+        <field name="inherit_id" ref="helpdesk.helpdesk_ticket_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//header/button[@name='assign_ticket_to_self']" position="after">
+                <button name="create_quotation" string="Create Quote" type="object" class="oe_highlight"
+                    />
+            </xpath>
+            <xpath expr="//form/sheet/div[1]/button[2][@name='toggle_active']" position="after">
+                <button class="oe_stat_button" name="action_view_timesheet" type="object" icon="fa-clock-o">
+                    <field string="Timesheets" name="timesheet_count" widget="statinfo" />
+                </button>
+            </xpath>
+            <xpath expr="//form/sheet/div[1]/button[2][@name='toggle_active']" position="after">
+                <button class="oe_stat_button" name="action_view_delivery" type="object" icon="fa-truck" attrs="{'invisible': [('help_desk_team_type','=','non_service_team')]}">
+                    <field string="Delivery" name="delivery_count" widget="statinfo" />
+                </button>
+            </xpath>
+            <xpath expr="//form/sheet/div[1]/button[2][@name='toggle_active']" position="after">
+                <button class="oe_stat_button" name="action_view_invoice" type="object" icon="fa-edit" attrs="{'invisible': [('help_desk_team_type','=','non_service_team')]}">
+                    <field string="Invoice" name="invoice_count" widget="statinfo" />
+                </button>
+            </xpath>
+            <xpath expr="//form/sheet/div[1]/button[2][@name='toggle_active']" position="after">
+                <button class="oe_stat_button" name="action_view_order" type="object" icon="fa-reorder" attrs="{'invisible': [('help_desk_team_type','=','non_service_team')]}">
+                    <field string="Orders" name="order_count" widget="statinfo" />
+                </button>
+            </xpath>
+            <xpath expr="//form/sheet/div[1]/button[2][@name='toggle_active']" position="after">
+                <button class="oe_stat_button" name="action_view_quotations" type="object" icon="fa-usd" attrs="{'invisible': [('help_desk_team_type','=','non_service_team')]}">
+                    <field string="Quotations" name="quotations_count" widget="statinfo" />
+                </button>
+            </xpath>
+            <xpath expr="//form/sheet/div[1]/button[2][@name='toggle_active']" position="after">
+                <button class="oe_stat_button" name="action_view_subscriptions" type="object" icon="fa-rss" attrs="{'invisible': [('help_desk_team_type','=','non_service_team')]}">
+                    <field string="Subscriptions" name="subscriptions_count" widget="statinfo" />
+                </button>
+            </xpath>
+            <xpath expr="//field[@name='description']" position="replace">   
+                <field name="description" attrs="{'required': [('help_desk_team_type','=','service_team')]}" placeholder="Description of the ticket..."/> 
+            </xpath>
+            <xpath expr="//field[@name='company_id']" position="after">
+                <field name="parent_id" readonly="1"/>
+                <field name="subscription_id" domain="['|', ('partner_id', 'child_of', partner_id), ('partner_id', '=', parent_id), ('state', '=', 'open')]" attrs="{'invisible': [('help_desk_team_type','!=','service_team')]}"/>
+                <field name="contract_item_id" domain="[('subscriptions_id', '=', subscription_id)]" attrs="{'invisible': [('help_desk_team_type','!=','service_team')]}"/>
+                <field name="project_id" attrs="{'invisible': [('help_desk_team_type','!=','service_team')]}"/>
+                <field name="analytic_account_id" attrs="{'invisible': [('help_desk_team_type','!=','service_team')]}"/>
+                <field name="site_id" attrs="{'invisible': [('help_desk_team_type','!=','service_team')]}"/>
+            </xpath>
+            <xpath expr="//field[@name='sla_name']" position="before">
+                <label class="oe_edit_only" for="name" string="Purchase Order #" attrs="{'invisible': [('help_desk_team_type','!=','service_team')]}"/>
+                <h2>
+                    <field name="po_ref" placeholder="Purchase Order" attrs="{'invisible': [('help_desk_team_type','!=','service_team')], 'required':[('help_desk_team_type','=','service_team')] }"/>
+                </h2>
+            </xpath>
+            <field name="team_id" position="after">
+                <field name="help_desk_team_type" invisible="1"/>
+            </field>
+            <xpath expr="//field[@name='tag_ids']" position="after">
+                <field name="reported_issues_ids" widget="many2many_tags" attrs="{'invisible': [('help_desk_team_type','!=','service_team')], 'required':[('help_desk_team_type','=','service_team')] }"/>
+                <field name="make_id" attrs="{'invisible': [('help_desk_team_type','!=','service_team')]}"/>
+                <field name="location_id" attrs="{'invisible': [('help_desk_team_type','!=','service_team')]}"/>
+                <field name="cause_ids" widget="many2many_tags" attrs="{'invisible': [('help_desk_team_type','!=','service_team')]}"/>
+                <field name="resolution_ids" widget="many2many_tags" attrs="{'invisible': [('help_desk_team_type','!=','service_team')]}"/>
+            </xpath>
+            <xpath expr="//form/sheet/group/group[2]/field[@name='ticket_type_id']" position="attributes">
+                <attribute name="string">Type(SLA)</attribute>
+            </xpath>
+            <xpath expr="//form/sheet/field[last()]" position="after">
+                <notebook>
+                    <page string="Timesheets" id="account_analytic_lines">
+                        <field name="account_analytic_lines" context="{'default_helpdesk_id': id, 'default_project_id': project_id, 'default_account_id': analytic_account_id}">
+                            <tree string="Timesheets" editable="Top">
+                                <field name="date"/>
+                                <field name="user_id" required="0" options="{&quot;no_open&quot;: True}"/>
+                                <field name="name"/>
+                                <field name="project_id" required="1"/>
+                                <field name="account_id" invisible="0"/>
+                                <field name="helpdesk_id"/>
+                                <field name="task_id" context="{'default_project_id': project_id}" domain="[('project_id',
+                                    '=', project_id)]"/>
+                                <field name="unit_amount" string="Duration" sum="Total time" widget="float_time"/>
+                                <field name="company_id" invisible="1" groups="base.group_multi_company"/>
+                            </tree>
+                        </field>
+                    </page>
+                    <page string="Time Estimation" attrs="{'invisible': [('help_desk_team_type','!=','service_team')]}">
+                        <group>
+                            <group string="Calculated Timings">
+                                <field name="enroute_start_time" readonly="True"/>
+                                <field name="enroute_stop_time" readonly="True"/>
+                                <label for="enroute_time"/>
+                                <div>
+                                    <field name="enroute_time" widget="float_time"/>
+                                    Hour(s)
+                                </div>
+                                <label for="working_hours"/>
+                                <div>
+                                    <field name="working_hours" widget="float_time"/>
+                                    Hour(s)
+                                </div>
+                            </group>
+                        </group>
+                        <group string="Work Start/Pause Time Logs">
+                            <field name="work_time_lines" nolabel="1" create="false" readonly="False">
+                                <tree string="Work Start/Pause Time Logs" create="false" editable="top">
+                                    <field name="sequence" invisible="1" readonly="1"/>
+                                    <field name="reason_pause"/>
+                                    <field name="response_time" readonly="1"/>
+                                    <field name="pause_time"  readonly="1"/>
+<!--                                    <field name="status"/-->
+                                    <field name="user_id"  readonly="1"/>
+                                    <field name="work_time" readonly="1" widget="float_time"/>
+                                </tree>
+                            </field>
+                        </group>
+                    </page>
+                </notebook>
+                <label for="signature"/>
+                <h2>
+                    <field name="signature" widget="signature"/>
+                </h2>
+                <group>
+                    <group>
+                        <field name="signed_by" />
+                        <field name="signature_date" />
+                    </group>
+                 </group>
+            </xpath>
+        </field>
+    </record>
+    
+    <record id="helpdesk_tickets_view_search_inherit" model="ir.ui.view">
+        <field name="name">helpdesk.ticket.search.inherit</field>
+        <field name="model">helpdesk.ticket</field>
+        <field name="inherit_id" ref="helpdesk.helpdesk_tickets_view_search"/>
+        <field name="arch" type="xml">
+            <xpath expr="//search" position="inside">
+                <field name="reported_issues_ids"/>
+                <field name="cause_ids"/>
+                <field name="resolution_ids"/>
+                <field name="location_id"/>
+                <field name="make_id"/>
+                <field name="po_ref"/>
+                <field name="project_id"/>
+                <field name="analytic_account_id"/>
+                <field name="parent_id"/>
+            </xpath>
+            <xpath expr="//search/group" position="inside">
+                <filter string="Location" context="{'group_by':'location_id'}"/>
+                <filter string="Make" context="{'group_by':'make_id'}"/>
+                <filter string="Project" context="{'group_by':'project_id'}"/>
+                <filter string="Parent Customer" context="{'group_by':'parent_id'}"/>
+                <filter string="Analytic Account" context="{'group_by':'analytic_account_id'}"/>
+            </xpath>
+        </field>
+    </record>
+    
+</odoo>

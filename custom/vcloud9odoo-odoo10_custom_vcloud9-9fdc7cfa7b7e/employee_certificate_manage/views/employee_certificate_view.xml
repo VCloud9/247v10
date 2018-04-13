@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        
+        <record model="ir.ui.view" id="employee_certificate_form_view">
+            <field name="name">employee.certificate.form</field>
+            <field name="model">employee.certificate</field>
+            <field name="arch" type="xml">
+                <form string="Employee Certificates">
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="certificate_id"/>
+                                <field name="partner_id"/>
+                                <field name="first_days_reminder"/>
+                                <field name="second_days_reminder"/>
+                                <field name="desc"/>
+                                <field name="state"/>
+                            </group>
+                            <group>
+                                <field name="employee_id"/>
+                                <field name="company_id" groups="base.group_multi_company"/>
+                                <field name="first_reminder_date"/>
+                                <field name="second_reminder_date"/>
+                                <field name="certification_date"/>
+                                <field name="certfication_exp_date"/>
+                                <field name="user_id"/>
+                            </group>
+                        </group>
+                    </sheet>
+                    <div class="oe_chatter">
+                        <field name="message_follower_ids" widget="mail_followers"/>
+                        <field name="message_ids" widget="mail_thread"/>
+                    </div>
+                </form>
+            </field>
+        </record>
+        
+        <record id="employee_certificate_tree_view_list" model="ir.ui.view">
+            <field name="name">employee.certificate.tree</field>
+            <field name="model">employee.certificate</field>
+            <field name="arch" type="xml">
+                <tree string="Employee Certificates">
+                    <field name="certificate_id"/>
+                    <field name="employee_id"/>
+                    <field name="partner_id"/>
+                    <field name="certification_date"/>
+                    <field name="certfication_exp_date"/>
+                    <field name="first_days_reminder"/>
+                    <field name="second_days_reminder"/>
+                    <field name="first_reminder_date"/>
+                    <field name="second_reminder_date"/>
+                    <field name="company_id" groups="base.group_multi_company"/>
+                    <field name="user_id"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+        
+        <record model="ir.ui.view" id="employee_certificate_search_view">
+            <field name="name">employee.certificate.search</field>
+            <field name="model">employee.certificate</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="certificate_id"/>
+                    <field name="employee_id"/>
+                    <field name="partner_id"/>
+                    <field name="certification_date"/>
+                    <field name="certfication_exp_date"/>
+                    <field name="state"/>
+                    <field name="company_id"/>
+                    <field name="user_id"/>
+                        <group string="Group By">
+                            <filter name="by_certificate_id" string="Certificate"
+                                    context="{'group_by': 'certificate_id'}"/>
+                            <filter name="by_state" string="Status"
+                                    context="{'group_by': 'state'}"/>
+                            <filter name="by_partner_id" string="Partner"
+                                    context="{'group_by': 'partner_id'}"/>
+                            <filter name="by_certification_date" string="Certification Date"
+                                    context="{'group_by': 'certification_date'}"/>
+                            <filter name="by_company_id" string="Company"
+                                    context="{'group_by': 'company_id'}"/>
+                            <filter name="by_user_id" string="User"
+                                    context="{'group_by': 'user_id'}"/>
+                        </group>
+                </search>
+            </field>
+        </record>
+        
+        <record model="ir.actions.act_window" id="employee_certificate_action">
+            <field name="name">Employee Certificates</field>
+            <field name="res_model">employee.certificate</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        
+        <menuitem id="menu_certificates" web_icon="employee_certificate_manage,static/description/1.png" name="Certificates" groups="employee_certficate_manager"/>
+        <menuitem id="main_certificates_menu" name="Certificates"
+                  parent="menu_certificates"/>
+        <menuitem id="main_emp_certificates_menu" name="Employee Certificates"
+                  parent="main_certificates_menu" action="employee_certificate_action"/>
+        
+    </data>
+</openerp>

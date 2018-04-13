@@ -1,0 +1,30 @@
+<odoo>
+<data>
+
+        <record id = "view_job_min_wage" model = "ir.ui.view">
+            <field name = "name">res.country.state.tree</field>
+            <field name = "model">res.country.state</field>
+            <field name = "arch" type = "xml">
+                <tree string = "State Minumum Wages" editable = "top">
+                    <field name="min_wage"/>
+                    <field name="name"/> 
+                    <field name="code"/> 
+                    <field name="country_id" invisible="1"/>
+                </tree>
+            </field>
+        </record>
+
+
+        <record id = "action_job_state_prevailing_wage" model = "ir.actions.act_window">
+            <field name = "name">State Minimum Wages</field>
+            <field name = "res_model">res.country.state</field>
+            <field name = "view_type">form</field>
+            <field name = "view_mode">tree</field>
+            <field name = "domain">[('country_id.code','=','US')]</field>
+            <field name = "view_id" ref="view_job_min_wage"/>
+        </record>
+
+        <menuitem action = "action_job_state_prevailing_wage" id = "menu_job_min_wage" 
+                   name = "State Minumum Wages" parent = "menu_job_configuration" sequence = "100"/>
+</data>
+</odoo>

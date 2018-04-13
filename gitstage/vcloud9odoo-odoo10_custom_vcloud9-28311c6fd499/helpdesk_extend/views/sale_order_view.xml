@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="product_template_form_view_inherit_list_price_hide" model="ir.ui.view">
+       <field name="name">product.template.common.form.inherit</field>
+       <field name="model">product.template</field>
+       <field name="inherit_id" ref="product.product_template_form_view"/>
+       <field name="arch" type="xml">
+           <xpath expr="//form/sheet/notebook/page/group/group/field[@name='list_price']" position="attributes">
+               <attribute name="groups">helpdesk_extend.group_sale_price_visible,account.group_account_user</attribute>
+           </xpath>
+       </field>
+    </record>
+   
+    <record id="product_normal_form_view_inherit_lst_price_hide" model="ir.ui.view">
+       <field name="name">product.product.form.inherit</field>
+       <field name="model">product.product</field>
+       <field name="inherit_id" ref="product.product_normal_form_view"/>
+       <field name="arch" type="xml">
+           <xpath expr="//field[@name='lst_price']" position="attributes">
+               <attribute name="groups">helpdesk_extend.group_sale_price_visible,account.group_account_user</attribute>
+           </xpath>
+       </field>
+    </record>
+    
+    <record id="view_order_form_inherit_zero" model="ir.ui.view">
+        <field name="name">sale.order.form.inherit</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//form/sheet/notebook/page[2]/group/group[3]/field[@name='origin']" position="after">
+                <field name="helpdesk_id" />
+            </xpath>
+            <xpath expr="//form/sheet/notebook/page[1]/field[1]/form/group" position="before">
+                <header>
+                    <button string="Set Zero Price" class="oe_stat_button" name="action_set_unit_price_zero"
+                        type="object" attrs="{'invisible': [('state','in',['done','cancel'])]}"
+                        >
+                    </button>
+                </header>
+            </xpath>
+            <group class="oe_subtotal_footer oe_right" name="sale_total" position="attributes">
+                <attribute name="groups">helpdesk_extend.group_sale_price_visible,account.group_account_user</attribute>
+            </group>
+
+            <xpath expr="//form/sheet/notebook/page/field/tree/field[@name='price_unit']" position="attributes">
+               <attribute name="groups">helpdesk_extend.group_sale_price_visible,account.group_account_user</attribute>
+            </xpath>
+            <xpath expr="//form/sheet/notebook/page/field/tree/field[@name='price_subtotal']" position="attributes">
+               <attribute name="groups">helpdesk_extend.group_sale_price_visible,account.group_account_user</attribute>
+            </xpath>
+            <xpath expr="//form/sheet/notebook/page/field/form/group/group/field[@name='price_subtotal']" position="attributes">
+               <attribute name="groups">helpdesk_extend.group_sale_price_visible,account.group_account_user</attribute>
+            </xpath>
+            <xpath expr="//form/sheet/notebook/page/field/form/group/group/field[@name='price_unit']" position="attributes">
+               <attribute name="groups">helpdesk_extend.group_sale_price_visible,account.group_account_user</attribute>
+            </xpath>
+
+        </field>
+    </record>
+    
+    <record id="view_sales_order_filter_inherit_ticket" model="ir.ui.view">
+        <field name="name">sale.order.list.select.inherit</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_sales_order_filter"/>
+        <field name="arch" type="xml">
+            <xpath expr="//search/group/filter[@name='customer']" position="after">
+                <filter string="Ticket" domain="[]" context="{'group_by':'helpdesk_id'}"/>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

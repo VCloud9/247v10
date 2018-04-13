@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record model="certificate.name" id="c1">
+          <field name="name">Climber</field>
+        </record>
+        <record model="certificate.name" id="c2">
+          <field name="name">RF Awareness</field>
+        </record>
+        <record model="certificate.name" id="c3">
+          <field name="name">CPR</field>
+        </record>
+        <record model="certificate.name" id="c4">
+          <field name="name">OSHA 10</field>
+        </record>
+        <record model="certificate.name" id="c5">
+          <field name="name">Man Lift</field>
+        </record>
+        <record model="certificate.name" id="c6">
+          <field name="name">Anritzu</field>
+        </record>
+
+    </data>
+</odoo>

@@ -1,0 +1,313 @@
+<odoo>
+    <data>
+        <report id="helpdesk_extend_ticket_report" model="helpdesk.ticket" menu="True" string="Print
+            Ticket" report_type="qweb-pdf" name="helpdesk_extend.helpdesk_extend_report"
+            file="helpdesk_extend.helpdesk_extend_report" />
+        
+        <template id="helpdesk_extend_report">
+            <t t-foreach="docs" t-as="doc">
+                <t t-call="report.external_layout">
+                    <div class="page">
+                        <div class="row">
+                            <div name="invoice_address" class="col-xs-5 col-xs-offset-7">
+                                <address t-field="doc.partner_id" t-options='{"widget": "contact", "fields": ["address",
+                                    "name"], "no_marker": True}' />
+                            </div>
+                        </div>
+                        
+                        <div class="row">
+                            <t t-if="doc.name">
+                                <h3>
+                                    Tickets: <span t-field="doc.name"/>
+                                </h3>
+                            </t>
+                        </div>
+                        <div class="well well-lg">
+                            <div class="row">
+                                <div t-if="doc.help_desk_team_type == 'service_team'" class="col-xs-3">
+                                    <strong>Purchase Order No.:</strong>
+                                </div>
+                                <div t-if="doc.help_desk_team_type == 'service_team'" class="col-xs-3">
+                                    <span t-field="doc.po_ref" />
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <strong>Helpdesk Team:</strong>
+                                </div>
+                                <div class="col-xs-3">
+                                    <span t-field="doc.team_id"/>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <strong>Assigned to:</strong>
+                                </div>
+                                <div class="col-xs-3">
+                                    <span t-field="doc.user_id.name"/>
+                                </div>
+                                <div class="col-xs-3">
+                                    <strong>Customer Email:</strong>
+                                </div>
+                                <div class="col-xs-3">
+                                    <span t-field="doc.partner_email"/>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <strong>Priority:</strong>
+                                </div>
+                                <div class="col-xs-3">
+                                    <span t-field="doc.priority"/>
+                                </div>
+                                <div class="col-xs-3">
+                                    <strong>Type(SLA):</strong>
+                                </div>
+                                <div class="col-xs-3">
+                                    <span t-field="doc.ticket_type_id"/>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <strong>Status:</strong>
+                                </div>
+                                <div class="col-xs-3">
+                                    <span t-field="doc.stage_id"/>
+                                </div>
+                                <div class="col-xs-3">
+                                    <strong>Tags:</strong>
+                                </div>
+                                <div class="col-xs-3">
+                                    <span t-esc="doc.tag_ids_str(doc.tag_ids)"/>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <strong>Parent Company:</strong>
+                                </div>
+                                <div class="col-xs-3">
+                                    <span t-field="doc.parent_id.name"/>
+                                </div>
+                            </div>
+                            <div class="row" t-if="doc.help_desk_team_type == 'service_team'">
+                                <div class="col-xs-3">
+                                    <strong>Contracts:</strong>
+                                </div>
+                                <div class="col-xs-3">
+                                    <span t-field="doc.subscription_id"/>
+                                </div>
+                                <div class="col-xs-3">
+                                    <strong>Make:</strong>
+                                </div>
+                                <div class="col-xs-3">
+                                    <span t-field="doc.make_id"/>
+                                </div>
+                            </div>
+                            <div class="row" t-if="doc.help_desk_team_type == 'service_team'">
+                                <div class="col-xs-3">
+                                    <strong>Contract Asset:</strong>
+                                </div>
+                                <div class="col-xs-3">
+                                    <span t-field="doc.contract_item_id"/>
+                                </div>
+                                <div class="col-xs-3">
+                                    <strong>Location:</strong>
+                                </div>
+                                <div class="col-xs-3">
+                                    <span t-field="doc.location_id"/>
+                                </div>
+                            </div>
+                            <div class="row" t-if="doc.help_desk_team_type == 'service_team'">
+                                <div class="col-xs-3">
+                                    <strong>Project:</strong>
+                                </div>
+                                <div class="col-xs-3">
+                                    <span t-field="doc.project_id"/>
+                                </div>
+                                <div class="col-xs-3">
+                                    <strong>Causes:</strong>
+                                </div>
+                                <div class="col-xs-3">
+                                    <span t-esc="doc.cause_ids_str(doc.cause_ids)"/>
+                                </div>
+                            </div>
+                            <div class="row" t-if="doc.help_desk_team_type == 'service_team'">
+                                <div class="col-xs-3">
+                                    <strong>Site:</strong>
+                                </div>
+                                <div class="col-xs-3">
+                                    <span t-field="doc.site_id"/>
+                                </div>
+                                <div class="col-xs-3">
+                                    <strong>Reported Issues:</strong>
+                                </div>
+                                <div class="col-xs-3">
+                                    <span t-esc="doc.reported_issues_ids_str(doc.reported_issues_ids)"/>
+                                </div>
+                            </div>
+                            <div class="row" t-if="doc.help_desk_team_type == 'service_team'">
+                                <div class="col-xs-3" >
+                                    <strong>Analytic Account:</strong>
+                                </div>
+                                <div class="col-xs-3" >
+                                    <span t-field="doc.analytic_account_id"/>
+                                </div>
+                                <div class="col-xs-3">
+                                    <strong>Resolutions:</strong>
+                                </div>
+                                <div class="col-xs-3">
+                                    <span t-esc="doc.resolution_ids_str(doc.resolution_ids)"/>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- <div style="margin-top: 20px;"> <table style="margin-left: 10px; margin-right:
+                            10px;" class="table table-condensed"> <tr style="border-bottom:
+                            hidden; border-top: hidden;"> <td width="17%"><strong>Helpdesk
+                            Team:</strong></td> <td width="30%"><span t-field="doc.team_id"/></td>
+                            <td><t t-if="doc.partner_id != False"><strong>Customer:</strong></t></td>
+                            <td width="30%"><t t-if="doc.partner_id != False"><span
+                            t-field="doc.partner_id.name"/></t></td> </tr> <tr style="border-bottom:
+                            hidden;"> <td width="17%"><strong>Assigned to:</strong></td>
+                            <td width="30%"><span t-field="doc.user_id.name"/></td>
+                            <td width="17%"><strong>Customer Email:</strong></td>
+                            <td width="30%"><span t-esc="doc.partner_email"/></td>
+                            </tr> <tr style="border-bottom: hidden;"> <td width="17%"><strong>Priority:</strong></td>
+                            <td width="30%"><span t-field="doc.priority"/></td> <td
+                            width="17%"><strong>Type(SLA):</strong></td> <td width="30%"><span
+                            t-field="doc.ticket_type_id" /></td> </tr> <tr style="border-bottom:
+                            hidden;"> <td width="17%"><strong>Kanban State:</strong></td>
+                            <td width="30%"><span t-field="doc.kanban_state"/></td>
+                            <td width="17%"><strong>Tags:</strong></td> <td width="30%"><span
+                            t-esc="doc.tag_ids_str(doc.tag_ids)" /></td> </tr> <tr
+                            style="border-bottom: hidden;"> <td width="17%"><strong>Parent
+                            Customer:</strong></td> <td width="30%"><span t-field="doc.parent_id.name"
+                            /></td> <td width="17%"><strong>Reported Issues:</strong></td>
+                            <td width="30%"><span t-esc="doc.reported_issues_ids_str(doc.reported_issues_ids)"/></td>
+                            </tr> <tr style="border-bottom: hidden;"> <td width="17%"><strong>Contracts:</strong></td>
+                            <td width="30%"><span t-field="doc.subscription_id"/></td>
+                            <td width="17%"><strong>Make:</strong></td> <td width="30%"><span
+                            t-field="doc.make_id"/></td> </tr> <tr style="border-bottom:
+                            hidden;"> <td width="17%"><strong>Contract Asset:</strong></td>
+                            <td width="30%"><span t-field="doc.contract_item_id"/></td>
+                            <td width="17%"><strong>Location:</strong></td> <td width="30%"><span
+                            t-field="doc.location_id"/></td> </tr> <tr style="border-bottom:
+                            hidden;"> <td width="17%"><strong>Project:</strong></td>
+                            <td width="30%"><span t-field="doc.project_id"/></td>
+                            <td width="17%"><strong>Causes:</strong></td> <td width="30%"><span
+                            t-esc="doc.cause_ids_str(doc.cause_ids)" /></td> </tr>
+                            <tr style="border-bottom: hidden;"> <td width="17%"><strong>Analytic
+                            Account:</strong></td> <td width="30%"><span t-field="doc.analytic_account_id"/></td>
+                            <td width="17%"><strong>Resolutions:</strong></td> <td
+                            width="30%"><span t-esc="doc.resolution_ids_str(doc.resolution_ids)"/></td>
+                            </tr> </table> </div> -->
+                        
+                        
+                        
+                        
+                        
+                        <!-- <table style="margin-left: 10px; margin-right: 10px;" class="table table-condensed">
+                            <tr style="border-bottom: hidden; border-top: hidden;">
+                            <td width="17%"><strong>Description</strong></td> <td
+                            width="83%"><span t-field="doc.description"/></td> </tr>
+                            </table> -->
+                        
+                        <div style="margin-top: 10px">
+                            <h3>Timesheets</h3>
+                            <table class="table table-condensed table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>Date</th>
+                                        <th>User</th>
+                                        <th>Description</th>
+                                        <th>Project</th>
+                                        <th>Analytic Account</th>
+                                        <th>Helpdesk Ticket</th>
+                                        <th>Task</th>
+                                        <th class="text-right">Duration</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="invoice_tbody">
+                                    <tr t-foreach="doc.account_analytic_lines" t-as="l">
+                                        <td>
+                                            <span t-field="l.date"/>
+                                        </td>
+                                        <td>
+                                            <span t-field="l.user_id.name"/>
+                                        </td>
+                                        <td>
+                                            <span t-field="l.name"/>
+                                        </td>
+                                        <td>
+                                            <span t-field="l.project_id.name"/>
+                                        </td>
+                                        <td>
+                                            <span t-field="l.account_id"/>
+                                        </td>
+                                        <td>
+                                            <span t-field="l.helpdesk_id"/>
+                                        </td>
+                                        <td>
+                                            <span t-field="l.task_id.name"/>
+                                        </td>
+                                        <td class="text-right">
+                                            <span t-field="l.unit_amount"/>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        
+                        <div style="margin-top: 20px;">
+                            <div class="row mt32 mb32" t-if="doc.help_desk_team_type == 'service_team'">
+                                <div class="col-xs-2">
+                                    <strong>Description:</strong>
+                                </div>
+                                <div class="col-xs-10">
+                                    <span t-field="doc.description"/>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- <div style="margin-top:10px"> <strong><h4>Calculated Timings</h4></strong> <table
+                            style="margin-left: 10px; margin-right: 10px;" class="table
+                            table-condensed"> <tr style="border-bottom: hidden; border-top:
+                            hidden;"> <td width="17%"><strong>Traveling Start Time:</strong></td>
+                            <td width="30%"><span t-field="doc.enroute_start_time"/></td>
+                            </tr> <tr style="border-bottom: hidden;"> <td width="17%"><strong>Traveling
+                            Stop Time:</strong></td> <td width="30%"><span t-field="doc.enroute_stop_time"/></td>
+                            </tr> <tr style="border-bottom: hidden;"> <td width="17%"><strong>Total
+                            Traveling Time:</strong></td> <td width="30%"><span t-field="doc.enroute_time"/></td>
+                            </tr> <tr style="border-bottom: hidden;"> <td width="17%"><strong>Working
+                            Hour(s):</strong></td> <td width="30%"><span t-field="doc.working_hours"/></td>
+                            </tr> </table> <br/> <strong><h4>Work Start/Pause Time
+                            Logs</h4></strong> <table class="table table-condensed">
+                            <thead> <tr> <th>Pause Reason</th> <th>Response Time </th>
+                            <th>Pause Time</th> <th>Responsible User</th> <th class="text-right">Work
+                            Time</th> </tr> </thead> <tbody class="invoice_tbody">
+                            <tr t-foreach="doc.work_time_lines" t-as="l"> <td><span
+                            t-field="l.reason_pause"/></td> <td><span t-field="l.response_time"/></td>
+                            <td><span t-field="l.pause_time"/></td> <td><span t-field="l.user_id.name"/></td>
+                            <td class="text-right"><span t-field="l.work_time"/></td>
+                            </tr> </tbody> </table> </div> -->
+                        <div class="row">
+                            <div class="col-xs-7">
+                            </div>
+                            <div class="col-xs-5">
+                                <strong>Customer Signature:</strong>
+                                <br/>
+                                <img t-if="doc.signature" t-att-src="'data:image/png;base64,%s' % doc.signature" height="100"
+                                    width="280"/>
+                                ___________________________________
+                                <br/>
+                                Signed By: <spam t-field="doc.signed_by" />
+                                <br/>
+                                <span t-field="doc.signature_date" />
+                            </div>
+                        </div>
+                    </div>
+                </t>
+            </t>
+        </template>
+        
+    </data>
+</odoo>

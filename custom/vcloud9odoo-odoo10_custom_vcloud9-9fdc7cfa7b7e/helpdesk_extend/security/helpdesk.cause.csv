@@ -1,0 +1,68 @@
+id,name
+add_delete_users_cause,Add/Delete Users
+added_alarm_componen_cause,Added Alarm Componen
+airline_has_leak_cause,Airline Has Leak
+alarm_battery_failed_cause,Alarm Battery Failed
+blower_motor_failed_cause,Blower Motor Failed
+blower_pack_failed_cause,Blower Pack Failed
+blown_fuse_cause,Blown Fuse
+breaker_tripped_cause,Breaker Tripped
+broken_carrier_cause,Broken Carrier
+cable_failure_cause,Cable Failure
+cable_wire_pinched_cause,Cable/Wire Pinched
+call_cancelled_cause,Call Cancelled
+camers_out_of_focus_cause,Camers Out of Focus
+carrier_not_latched_cause,Carrier Not Latched
+carrier_pen_in_latch_cause,Carrier Pen in Latch
+carrier_replacement_cause,Carrier Replacement
+cell_back_up_failed_cause,Cell Back Up Failed
+component_pcb_cause,Component PCB
+condensation_buildup_cause,Condensation Buildup
+could_not_duplicate_cause,Could Not Duplicate
+cust_cancelled_call_cause,Cust Cancelled Call
+cust_request_assist_cause,Cust Request Assist
+customer_education_cause,Customer Education
+customer_error_cause,Customer Error
+damaged_by_vendor_cause,Damaged By Vendor
+detect_switch_failed_cause,Detect Switch Failed
+dirt_grime_build_up_cause,Dirt/Grime Build Up
+diverter_failed_cause,Diverter Failed
+door_seals_worn_cause,Door Seals Worn
+doormotorctrl_failed_cause,DoorMotorCtrl Failed
+elect_switch_pad_cause,Elect Switch/Pad
+electrical_sensor_cause,Electrical Sensor
+extreme_weather_cause,Extreme Weather
+foreign_object_debris_cause,ForeignObject/Debris
+handset_cord_worn_cause,Handset Cord Worn
+installation_job_cause,Installation Job
+leak_undergrnd_tube_cause,Leak Undergrnd Tube
+loose_connection_cause,Loose Connection
+misuse_abuse_cause,Misuse / Abuse
+normal_wear_n_tear_cause,Normal Wea N Tear
+not_comco_equipment_cause,Not ComCo Equipment
+not_responding_cause,Not Responding
+offline_unplugged_cause,Offline / Unplugged
+overfill_w_prescript_cause,Overfill w/Prescript
+pcb_failure_cause,PCB Failure
+pharmacy_error_cause,Pharmacy Error
+phone_line_trouble_cause,Phone Line Trouble
+power_source_failure_cause,Power Source Failure
+power_supply_failed_cause,Power Supply Failed
+preventative_maint_cause,Preventative Maint
+replaced_alarm_comp_cause,Replaced Alarm Comp
+reprogram_cause,Reprogram
+rodent_pest_damage_cause,Rodent-Pest Damage
+routine_maintenance_cause,Routine Maintenance
+safety_bar_misalignd_cause,Safety Bar Misalignd
+safety_switch_failed_cause,Safety Switch Failed
+separated_tube_joint_cause,Separated Tube Joint
+setting_off_cause,Setting off
+store_hours_changed_cause,Store Hours Changed
+stripped_out_cause,Stripped Out
+system_turned_off_cause,System Turned Off
+teller_error_cause,Teller Error
+timelock_over_wound_cause,Timelock Over Wound
+upgrade_required_cause,Upgrade Required
+vandalism_by_custome_cause,Vandalism By Custome
+wear_bands_worn_cause,Wear Bands Worn
+wobble_switch_failed_cause,Wobble Switch Failed

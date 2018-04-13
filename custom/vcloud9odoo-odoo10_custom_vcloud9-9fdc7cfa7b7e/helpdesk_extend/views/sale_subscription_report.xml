@@ -1,0 +1,209 @@
+
+<odoo>
+    <data>
+        <report id="sale_subscription_ticket_report" model="sale.subscription" menu="True"
+            string="Print Subscription" report_type="qweb-pdf" name="helpdesk_extend.sale_subscription_report"
+            file="helpdesk_extend.sale_subscription_report" />
+        
+        <template id="sale_subscription_report">
+            <t t-foreach="docs" t-as="doc">
+                <t t-call="report.external_layout">
+                    <div class="page">
+                        <div class="row">
+                            <div name="invoice_address" class="col-xs-5 col-xs-offset-7">
+                                <address t-field="doc.partner_id" t-options='{"widget": "contact", "fields": ["address",
+                                    "name"], "no_marker": True}' />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <h4>
+                                    <strong>Subscription:</strong>
+                                    <span t-field="doc.display_name" />
+                                </h4>
+                            </div>
+                        </div>
+<!--                        <div style="margin-top: 10px" class="row">-->
+<!--                            <div class="col-xs-3">-->
+<!--                                <strong>Customer:</strong>-->
+<!--                            </div>-->
+<!--                            <div class="col-xs-3">-->
+<!--                                <span t-field="doc.partner_id.name" />-->
+<!--                            </div>-->
+<!--                            <div class="col-xs-3">-->
+<!--                                <strong>Subscription Template:</strong>-->
+<!--                            </div>-->
+<!--                            <div class="col-xs-3">-->
+<!--                                <span t-field="doc.template_id" />-->
+<!--                            </div>-->
+<!--                        </div>-->
+                        <div class="row">
+                            <div class="col-xs-3">
+                                <strong>Reference:</strong>
+                            </div>
+                            <div class="col-xs-3">
+                                <span t-field="doc.code" />
+                            </div>
+                            <div class="col-xs-3">
+                                <strong>Sales Rep:</strong>
+                            </div>
+                            <div class="col-xs-3">
+                                <span t-field="doc.user_id.name" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-3">
+                                <strong>Date of Next Invoice:</strong>
+                            </div>
+                            <div class="col-xs-3">
+                                <span t-field="doc.recurring_next_date" />
+                            </div>
+                            <div class="col-xs-3">
+                                <strong>Start Date:</strong>
+                            </div>
+                            <div class="col-xs-3">
+                                <span t-field="doc.date_start" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-6">
+                            </div>
+                            <div class="col-xs-3">
+                                <strong>End Date:</strong>
+                            </div>
+                            <div class="col-xs-3">
+                                <span t-field="doc.date" />
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-6">
+                            </div>
+                            <div class="col-xs-3">
+                                <strong>Parent Company:</strong>
+                            </div>
+                            <div class="col-xs-3">
+                                <span t-field="doc.parent_id" />
+                            </div>
+                        </div>
+                        <div style="margin-top: 10px">
+                            <h3>Subscriptions Lines</h3>
+                            <table class="table table-condensed table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>Product</th>
+                                        <th>Description</th>
+                                        <th>Quantity</th>
+                                        <th>Actual quantity</th>
+                                        <th>Sold quantity</th>
+                                        <th>Unit Price</th>
+                                        <th>Discount (%)</th>
+                                        <th>Sub Total</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="invoice_tbody">
+                                    <tr t-foreach="doc.recurring_invoice_line_ids" t-as="l">
+                                        <td>
+                                            <span t-field="l.product_id.name"/>
+                                        </td>
+                                        <td>
+                                            <span t-field="l.name"/>
+                                        </td>
+                                        <td class="text-right">
+                                            <span t-field="l.quantity"/>
+                                        </td>
+                                        <td class="text-right">
+                                            <span t-field="l.actual_quantity"/>
+                                        </td>
+                                        <td class="text-right">
+                                            <span t-field="l.sold_quantity"/>
+                                        </td>
+                                        <td class="text-right">
+                                            <span t-field="l.price_unit"/>
+                                        </td>
+                                        <td class="text-right">
+                                            <span t-field="l.discount"/>
+                                        </td>
+                                        <td class="text-right">
+                                            <span t-field="l.price_subtotal"/>
+                                        </td>
+                                    </tr>
+                                    <tr class="border-black">
+                                        <td  colspan="7" class="text-right">
+                                            <strong>Recurring Price</strong>
+                                        </td>
+                                        <td class="text-right">
+                                            <span t-field="doc.recurring_total" t-options='{"widget": "monetary", "display_currency":doc.currency_id}'/>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div style="margin-top: 10px">
+                            <h3>Assets Under Contract</h3>
+                            <table class="table table-condensed table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th>Equipment</th>
+                                        <th>Quantity</th>
+                                        <th>Unit of Measure</th>
+                                        <th>Site</th>
+                                        <th>Serial Number</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="invoice_tbody">
+                                    <tr t-foreach="doc.equipment_subscription_line_ids" t-as="l">
+                                        <td>
+                                            <span t-field="l.product_id.name"/>
+                                        </td>
+                                        <td class="text-right">
+                                            <span t-field="l.product_uom_qty"/>
+                                        </td>
+                                        <td>
+                                            <span t-field="l.product_uom_id"/>
+                                        </td>
+                                        <td>
+                                            <span t-field="l.site_id"/>
+                                        </td>
+                                        <td>
+                                            <span t-field="l.serial_number"/>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        
+                        <div class="row" style="page-break-inside: avoid;">
+                            <div class="col-xs-12">
+                                <h3><strong>
+                                    Terms and Conditions:
+                                    </strong>
+                                </h3>
+                                <p>
+                                    <div t-field="doc.term_and_condition">
+                                    </div>
+                                </p>
+                            </div>
+                        </div><br/><br/><br/><br/>
+                        <div class="row">
+                            <div class="col-xs-6">
+                                Subscriber Authorized Signature:<br/>
+                                Authorized by:<t t-if="doc.signature"><img t-att-src="'data:image/png;base64,%s' % doc.signature" height="100"
+                                    width="280"/><br/></t><t t-if="not doc.signature">____________________</t><br/>
+                                By: <t t-if="doc.signed_by"><span t-field="doc.signed_by" /></t><t t-if="not doc.signed_by">_____________________________</t><br/>
+                                (Title): ___________________________<br/>
+                                (Date): <t t-if="doc.signature_date"><span t-field="doc.signature_date" /></t><t t-if="not doc.signature_date">_____________________________</t><br/>
+                            </div>
+                            <div class="col-xs-6">
+                                <span t-field="doc.company_id.name"/> Authorized Signature:<br/>
+                                Authorized by:____________________<br/>
+                                By:_____________________________<br/>
+                                (Title):___________________________<br/>
+                                (Date):__________________________
+                            </div>
+                        </div>
+                    </div>
+                </t>
+            </t>
+        </template>
+    </data>
+</odoo>

@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        
+        <record model="helpdesk.make" id="all_equipment_make">
+          <field name="name">All Equipment</field>
+        </record>
+        <record model="helpdesk.make" id="amer_vault_800_make">
+          <field name="name">Amer Vault 800</field>
+        </record>
+        <record model="helpdesk.make" id="american_vault_make">
+          <field name="name">American Vault</field>
+        </record>
+        <record model="helpdesk.make" id="amerVault_781_make">
+          <field name="name">AmerVault 781</field>
+        </record>
+        <record model="helpdesk.make" id="annunciator_sensor_make">
+          <field name="name">Annunciator / Sensor</field>
+        </record>
+        <record model="helpdesk.make" id="audio_authority_make">
+          <field name="name">Audio Authority</field>
+        </record>
+        <record model="helpdesk.make" id="bavis_autoveyor_make">
+          <field name="name">Bavis Autoveyor</field>
+        </record>
+        <record model="helpdesk.make" id="bavis_avcom_3000_make">
+          <field name="name">Bavis Bavcom 3000</field>
+        </record>
+        <record model="helpdesk.make" id="bavis_deal_drawer_make">
+          <field name="name">Bavis Deal Drawer</field>
+        </record>
+        <record model="helpdesk.make" id="bavis_transTrax_make">
+          <field name="name">Bavis TransTrax</field>
+        </record>
+        <record model="helpdesk.make" id="cancelled_make">
+          <field name="name">Cancelled</field>
+        </record>
+        <record model="helpdesk.make" id="com_pt_to_pt_mult_make">
+          <field name="name">Com Pt to Pt / Mult.</field>
+        </record>
+        <record model="helpdesk.make" id="comco_521_make">
+          <field name="name">ComCo 521</field>
+        </record>
+        <record model="helpdesk.make" id="comco_522_make">
+          <field name="name">ComCo 522</field>
+        </record>
+        <record model="helpdesk.make" id="comco_523_make">
+          <field name="name">ComCo 523</field>
+        </record>
+        <record model="helpdesk.make" id="comco_550_make">
+          <field name="name">ComCo 550</field>
+        </record>
+        <record model="helpdesk.make" id="comco_680_make">
+          <field name="name">ComCo 680</field>
+        </record>
+        <record model="helpdesk.make" id="comco_880_make">
+          <field name="name">ComCo 880</field>
+        </record>
+        <record model="helpdesk.make" id="comco_990_make">
+          <field name="name">ComCo 990</field>
+        </record>
+        <record model="helpdesk.make" id="comco_900A_make">
+          <field name="name">ComCo 900A</field>
+        </record>
+        <record model="helpdesk.make" id="comco_900AX_make">
+          <field name="name">ComCo 900AX</field>
+        </record>
+        <record model="helpdesk.make" id="comco_910_make">
+          <field name="name">ComCo 910</field>
+        </record>
+        <record model="helpdesk.make" id="comco_G4_make">
+          <field name="name">ComCo G4</field>
+        </record>
+        <record model="helpdesk.make" id="comco_lift_station_make">
+          <field name="name">ComCo Lift Station</field>
+        </record>
+        <record model="helpdesk.make" id="comco_lts_1000_make">
+          <field name="name">ComCo LTS 1000</field>
+        </record>
+        <record model="helpdesk.make" id="comco_lts_900_make">
+          <field name="name">ComCo LTS 900</field>
+        </record>
+        <record model="helpdesk.make" id="comco_tcs_audi_Video_make">
+          <field name="name">ComCo TCS Audi/Video</field>
+        </record>
+        <record model="helpdesk.make" id="csi_audio_make">
+          <field name="name">CSI Audio</field>
+        </record>
+        <record model="helpdesk.make" id="deal_drawer_make">
+          <field name="name">Deal Drawer</field>
+        </record>
+        <record model="helpdesk.make" id="diebold_make">
+          <field name="name">Diebold</field>
+        </record>
+        <record model="helpdesk.make" id="diebold_C25_make">
+          <field name="name">Diebold C25</field>
+        </record>
+        <record model="helpdesk.make" id="diebold_vat_12_make">
+          <field name="name">Diebold Vat 12</field>
+        </record>
+        <record model="helpdesk.make" id="diebold_vat_21_make">
+          <field name="name">Diebold Vat 21</field>
+        </record>
+        <record model="helpdesk.make" id="diebold_vat_30_make">
+          <field name="name">Diebold Vat 30</field>
+        </record>
+        <record model="helpdesk.make" id="diebold_vat_7_make">
+          <field name="name">Diebold Vat 7</field>
+        </record>
+        <record model="helpdesk.make" id="drive_thru_make">
+          <field name="name">Drive Thru</field>
+        </record>
+        <record model="helpdesk.make" id="greyfield_audio_make">
+          <field name="name">Greyfield Audio</field>
+        </record>
+        <record model="helpdesk.make" id="ha_16_make">
+          <field name="name">HA 16</field>
+        </record>
+        <record model="helpdesk.make" id="HA1000_make">
+          <field name="name">HA1000</field>
+        </record>
+        <record model="helpdesk.make" id="HA21_make">
+          <field name="name">HA21</field>
+        </record>
+        <record model="helpdesk.make" id="HA33_make">
+          <field name="name">HA33</field>
+        </record>
+        <record model="helpdesk.make" id="hamilton_make">
+          <field name="name">Hamilton</field>
+        </record>
+        <record model="helpdesk.make" id="installation_job_make">
+          <field name="name">Installation Job</field>
+        </record>
+        <record model="helpdesk.make" id="Lanex_make">
+          <field name="name">Lanex</field>
+        </record>
+        <record model="helpdesk.make" id="Lefebure_make">
+          <field name="name">Lefebure</field>
+        </record>
+        <record model="helpdesk.make" id="Lefebure_TelAir_10_make">
+          <field name="name">Lefebure TelAir 10</field>
+        </record>
+        <record model="helpdesk.make" id="Lefebure_TelAir_9_make">
+          <field name="name">Lefebure TelAir 9</field>
+        </record>
+        <record model="helpdesk.make" id="Lefebure_TelAir_90_make">
+          <field name="name">Lefebure TelAir 90</field>
+        </record>
+        <record model="helpdesk.make" id="Mosler_make">
+          <field name="name">Mosler</field>
+        </record>
+        <record model="helpdesk.make" id="Mosler_PV_800_make">
+          <field name="name">Mosler PV 800</field>
+        </record>
+        <record model="helpdesk.make" id="Mosler_TRV_3_make">
+          <field name="name">Mosler TRV 3</field>
+        </record>
+        <record model="helpdesk.make" id="Night_Drop_make">
+          <field name="name">Night Drop</field>
+        </record>
+        <record model="helpdesk.make" id="Other_make">
+          <field name="name">Other</field>
+        </record>
+        <record model="helpdesk.make" id="Preventative_make">
+          <field name="name">Preventative Maint</field>
+        </record>
+        <record model="helpdesk.make" id="Security_Corp_make">
+          <field name="name">Security Corp</field>
+        </record>
+        <record model="helpdesk.make" id="Skillcraft_NC100_make">
+          <field name="name">Skillcraft NC100</field>
+        </record>
+        <record model="helpdesk.make" id="Skillcraft_NC200_make">
+          <field name="name">Skillcraft NC200</field>
+        </record>
+        <record model="helpdesk.make" id="Sterling_make">
+          <field name="name">Sterling</field>
+        </record>
+        <record model="helpdesk.make" id="Telecom_make">
+          <field name="name">Telecom</field>
+        </record>
+        <record model="helpdesk.make" id="Undercounter_Steel_make">
+          <field name="name">Undercounter Steel</field>
+        </record>
+        <record model="helpdesk.make" id="Vault_make">
+          <field name="name">Vault</field>
+        </record>
+        <record model="helpdesk.make" id="Skillcraft_NC500_make">
+          <field name="name">Skillcraft NC500</field>
+        </record>
+        <record model="helpdesk.make" id="Diebold_VAT23_make">
+          <field name="name">Diebold VAT23</field>
+        </record>
+        <record model="helpdesk.make" id="Diebold_VAT40_make">
+          <field name="name">Diebold VAT40</field>
+        </record>
+        <record model="helpdesk.make" id="Diebold_Audio_make">
+          <field name="name">Diebold Audio</field>
+        </record>
+        <record model="helpdesk.make" id="American_Vault_700_make">
+          <field name="name">American Vault 700</field>
+        </record>
+        <record model="helpdesk.make" id="American_Vault_3000_make">
+          <field name="name">American Vault 3000</field>
+        </record>
+        
+    </data>
+</odoo>

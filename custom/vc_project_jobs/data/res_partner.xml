@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding='UTF-8'?>
+<odoo>
+<data>
+
+    <record id="no_hotel" model="res.partner">
+            <field name="name">NO HOTEL</field>
+            <field name="supplier">True</field>
+            <field name="customer">False</field>
+    </record>
+
+</data>
+</odoo>

@@ -1,0 +1,29 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<odoo>
+
+    <record id = "sale_contract.menu_sale_subscription" model = "ir.ui.menu">
+        <field name = "sequence">1</field>
+    </record>
+
+    <record id = "account_contract_dashboard.menu_sale_subscription_dashboard" model = "ir.ui.menu">
+        <field name = "sequence">2</field>
+    </record>
+
+
+    <record id = "sale_subscription_view_form_projects" model = "ir.ui.view">
+        <field name = "name">sale.subscription.form.view.projects</field>
+        <field name = "model">sale.subscription</field>
+        <field name = "inherit_id" ref = "sale_contract.sale_subscription_view_form"></field>
+        <field name = "arch" type="xml">
+               <button name="action_subscription_invoice" position="after">
+                        <button class="oe_stat_button"
+                            icon="fa-puzzle-piece"
+                            name="action_subscription_projects"
+                            type="object"
+                            string="Project">
+                        </button>
+               </button>
+        </field>
+    </record>
+
+</odoo>

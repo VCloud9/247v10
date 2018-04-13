@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding='UTF-8'?>
+<odoo>
+<data>
+
+    <record id="personal_vehicle_model_brand" model="fleet.vehicle.model.brand">
+            <field name="name">Personal</field>
+    </record>
+
+    <record id="personal_vehicle_model" model="fleet.vehicle.model">
+            <field name="name">Vehicle</field>
+            <field name="brand_id" ref="personal_vehicle_model_brand"/>
+    </record>
+
+    <record id="personal_vehicle" model="fleet.vehicle">
+            <field name="model_id" ref="personal_vehicle_model"/>
+            <field name="license_plate">Used</field>
+    </record>
+
+</data>
+</odoo>

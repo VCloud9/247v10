@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openerp>
+    <data>
+        
+        <record model="ir.ui.view" id="certificate_form_view">
+            <field name="name">certificate.name</field>
+            <field name="model">certificate.name</field>
+            <field name="arch" type="xml">
+                <form string="Certificates">
+                    <sheet>
+                        <field name="image" widget="image" class="oe_avatar"/>
+                        <group>
+                            <group>
+                                 <h1><field string="Name" placeholder="Name of certificate" name="name"/></h1>
+                             </group>
+                        </group>
+                        
+                        
+                        <notebook>
+                            <page string="General Information">
+                                <group>
+                                    <group>
+                                        <field name="partner_id"/>
+                                        <field name="valid_for_years"/>
+                                        <field name="certfication_exp_date"/>
+                                        <field name="first_days_reminder"/>
+                            			<field name="second_days_reminder"/>
+                                    </group>
+                                    <group>
+                                    	<field name="desc"/>
+                                    </group>
+                                </group>
+                            </page>
+                            <page string="Employee Certificates">   
+                                <field nolabel="1" name="certificate_ids"/>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        
+        <record id="certificate_tree_view_list" model="ir.ui.view">
+            <field name="name">certificate.name</field>
+            <field name="model">certificate.name</field>
+                <field name="arch" type="xml">
+                    <tree string="Employee Ideas">
+                        <field name="name"/>
+                  </tree>
+                </field>
+        </record>
+
+        <record id="certificate_tree_view_search" model="ir.ui.view">
+            <field name="name">certificate.name</field>
+            <field name="model">certificate.name</field>
+                <field name="arch" type="xml">
+                    <search string="Employee Ideas">
+                        <field name="name"/>
+                  </search>
+                </field>
+        </record>        
+        
+        
+        
+        <record id="certificate_kanban_view" model="ir.ui.view">
+        <field name="name">certificate.name.kanban</field>
+        <field name="model">certificate.name</field>
+        <field name="priority">10</field>
+        <field name="arch" type="xml">
+            <kanban class="o_certificate_kanban">
+                <field name="name"/>
+                <templates>
+                    <t t-name="kanban-box">
+                    <div class="oe_kanban_global_click">
+                        <div class="o_kanban_image">
+                            <img t-att-src="kanban_image('certificate.name', 'image', record.id.value)"/>
+                        </div>
+                        <div class="oe_kanban_details">
+                            <strong>
+                                <field name="name"/><newline/>
+                            </strong>
+                        </div>
+                    </div>
+                    </t>
+                </templates>
+            </kanban>
+        </field>
+    </record>
+        
+        <record model="ir.actions.act_window" id="certificate_action">
+            <field name="name">Certificates</field>
+            <field name="res_model">certificate.name</field>
+            <field name="view_type">form</field>
+            <field name="view_mode">kanban,tree,form</field>
+        </record>
+        
+        <menuitem id="menu_configuration" name="Configuration" parent="menu_certificates"/>
+        <menuitem id="menu_configuration_item" name="Certificates" parent="menu_configuration"
+                  action="certificate_action"/>
+        
+     </data>
+</openerp>

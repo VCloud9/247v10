@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    
+    <record id="helpdesk_ticket_view_form_inherit_helpdesk_group" model="ir.ui.view">
+        <field name="name">helpdesk.ticket.form.inherit</field>
+        <field name="model">helpdesk.ticket</field>
+        <field name="inherit_id" ref="helpdesk.helpdesk_ticket_view_form"/>
+        <field name="arch" type="xml"> 
+            <xpath expr="//form/sheet/group/group[1]/field[@name='team_id']" position="after">
+                <field name="v_helpdesk_group"/>
+                <field name="v_group_user_id" widget="many2many_tags" attrs="{'invisible': [('v_helpdesk_group', '=', False)]}"/>
+            </xpath>
+        </field>
+    </record>
+    
+    <record id="helpdesk_tickets_view_search_inherit_helpdesk_group " model="ir.ui.view">
+        <field name="name">helpdesk.ticket.search.inherit</field>
+        <field name="model">helpdesk.ticket</field>
+        <field name="inherit_id" ref="helpdesk.helpdesk_tickets_view_search"/>
+        <field name="arch" type="xml"> 
+            <xpath expr="//search/group" position="inside">
+                <filter string="Helpdesk Group" context="{'group_by':'v_helpdesk_group'}"/>
+            </xpath>
+        </field>
+    </record>
+    
+</odoo>

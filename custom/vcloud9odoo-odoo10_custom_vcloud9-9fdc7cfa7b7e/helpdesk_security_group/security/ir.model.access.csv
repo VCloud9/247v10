@@ -1,0 +1,14 @@
+"id","name","model_id:id","group_id:id","perm_read","perm_write","perm_create","perm_unlink"
+"access_helpdesk_tags_team_own_tickets","helpdesk.tag.team","helpdesk.model_helpdesk_tag","helpdesk_security_group.group_helpdesk_security_group_own_ticket",1,1,1,1
+"access_helpdesk_sla_team_own_tickets","helpdesk.sla.team","helpdesk.model_helpdesk_sla","helpdesk_security_group.group_helpdesk_security_group_own_ticket",1,0,0,0
+"access_helpdesk_stage_team_own_tickets","helpdesk.stage.team","helpdesk.model_helpdesk_stage","helpdesk_security_group.group_helpdesk_security_group_own_ticket",1,0,0,0
+"access_helpdesk_ticket_team_own_tickets","helpdesk.ticket.team","helpdesk.model_helpdesk_ticket","helpdesk_security_group.group_helpdesk_security_group_own_ticket",1,1,1,1
+"access_helpdesk_ticket_type_team_own_tickets","helpdesk.ticket.type.team","helpdesk.model_helpdesk_ticket_type","helpdesk_security_group.group_helpdesk_security_group_own_ticket",1,0,0,0
+"access_helpdesk_reportedissues_team_own_tickets","helpdesk.reportedissues.team","helpdesk_extend.model_helpdesk_reported_issues","helpdesk_security_group.group_helpdesk_security_group_own_ticket",1,0,0,0
+"access_helpdesk_cause_team_own_tickets","helpdesk.cause.team","helpdesk_extend.model_helpdesk_cause","helpdesk_security_group.group_helpdesk_security_group_own_ticket",1,0,0,0
+"access_helpdesk_resolution_team_own_tickets","helpdesk.resolution.team","helpdesk_extend.model_helpdesk_resolution","helpdesk_security_group.group_helpdesk_security_group_own_ticket",1,0,0,0
+"access_helpdesk_location_team_own_tickets","helpdesk.location.team","helpdesk_extend.model_helpdesk_location","helpdesk_security_group.group_helpdesk_security_group_own_ticket",1,0,0,0
+"access_helpdesk_make_team_own_tickets","helpdesk.make.team","helpdesk_extend.model_helpdesk_make","helpdesk_security_group.group_helpdesk_security_group_own_ticket",1,0,0,0
+"access_helpdesk_group_manager","helpdesk.group.manager","model_helpdesk_group","helpdesk.group_helpdesk_manager",1,1,1,1
+"access_helpdesk_group_user","helpdesk.group.userr","model_helpdesk_group","helpdesk.group_helpdesk_user",,,,
+"access_helpdesk_group_own","helpdesk.group.own","model_helpdesk_group","helpdesk_security_group.group_helpdesk_security_group_own_ticket",,,,

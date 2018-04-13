@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        
+        <record model="ir.ui.view" id="view_order_form_inherit_create_purchaseorder_line_by_SO">
+            <field name="name">sale.order.view</field>
+            <field name="model">sale.order</field>
+            <field name="inherit_id" ref="sale.view_order_form"/>
+            <field name="arch" type="xml">
+                 <button name="action_cancel" states="draft,sent,sale" type="object" position="after">
+                     <button string="Create Purchase Order" type="object" name="create_purchase_order_based_vendor"
+                              class="oe_highlight" attrs="{'invisible': [('need_external_service', '=', False)]}" invisible="True"/>
+                 </button>
+                 <field name="payment_term_id" position="after">
+                     <field name="need_external_service" invisible="1"/>
+                     <field name="so_created" invisible="1"/>
+                </field>
+                <xpath expr="//form/sheet/notebook/page[2]" position="after">
+                    <page string="Purchase Orders" attrs="{'invisible': [('need_external_service', '=', False)]}">
+                        <group >
+                            <field name="purchase_order_ids" nolabel="1" readonly="1"/>
+                        </group>
+                    </page>
+                </xpath>
+                <xpath expr="//form/sheet/notebook/page[1]/field[1]/tree/field[@name='product_id']" position="after">
+                    <field name="vendor_id" domain="[('supplier','=',True)]" required='0'/>
+                    <field name="product_type" invisible="1"/>
+                </xpath>
+                <xpath expr="//form/sheet/notebook/page[1]/field[1]/tree/field[@name='product_id']" position="before">
+                    <field name="is_po_created" invisible="1"/>
+                </xpath>
+                <xpath expr="//form/sheet/notebook/page[1]/field[1]/form/field[@name='name']" position="after">
+                    <field name="is_po_created"/>
+                </xpath>
+                <xpath expr="//form/sheet/notebook/page[1]/field[1]/form/group/group[1]/field[@name='price_subtotal']" position="after">
+                    <field name="vendor_id" domain="[('supplier','=',True)]" required='0'/>
+                    <field name="product_type" invisible="1"/>
+                </xpath>
+                <xpath expr="/form/sheet/div[1]" position="inside">
+                        <button class="oe_stat_button" type="object" name="get_purchase_order" 
+                        icon="fa-street-view" string="Purchase Orders"/>
+                </xpath>
+                
+                <xpath expr="/form/sheet/notebook/page[1]/field[1]/tree" position="inside">
+                	<button string="Purchase" type="object" name="create_purchase_order_based_vendor"
+                             class="fa fa-car" attrs="{'invisible': [('product_type', '=', 'product')]}"  />
+                </xpath>
+            </field>
+         </record>
+         
+         
+      </data>
+</odoo>

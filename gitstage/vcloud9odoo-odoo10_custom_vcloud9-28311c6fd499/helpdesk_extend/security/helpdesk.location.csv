@@ -1,0 +1,57 @@
+id,name
+alarm_dvr_location,Alarm/DVR
+all_equipment_location,All Equipment
+all_units_location,All Units
+black_location,Black
+black_red_location,Black & Red
+blue_location,Blue
+blue_red_location,Blue & Red
+brown_location,Brown
+cancelled_location,Cancelled
+cash_safe_location,Cash Safe
+cctv_lanex_biometrix_location,CCTV/Lanex/Biometrix
+commercial_location,Commercial
+consultation_station_location,Consultation Station
+drive_thru_location,Drive Thru
+drive_thru_atm_location,Drive Thru ATM
+gray_location,Gray
+green_location,Green
+installation_job_location,Installation Job
+lane_1_location,Lane 1
+Lane_10_location,Lane 10
+Lane_11_location,Lane 11
+Lane_12_location,Lane 12
+Lane_2_location,Lane 2
+Lane_3_location,Lane 3
+Lane_4_location,Lane 4
+Lane_5_location,Lane 5
+Lane_6_location,Lane 6
+Lane_7_location,Lane 7
+Lane_8_location,Lane 8
+Lane_9_location,Lane 9
+lobby_location,Lobby
+lobby_atm_location,Lobby ATM
+multiple_units_location,Multiple Units
+night_drop_location,Night Drop
+orange_location,Orange
+pharmacy_side_location,Pharmacy Side
+point_to_point_div_location,Point To Point / Div
+preventative_main_location,Preventative Main
+promo_video_location,Promo Video
+purple_location,Purple
+red_location,Red
+remote_atm_location,Remote ATM
+Teller_1_location,Teller 1
+Teller_2_location,Teller 2
+Teller_3_location,Teller 3
+Teller_4_location,Teller 4
+Teller_5_location,Teller 5
+Teller_6_location,Teller 6
+Teller_7_location,Teller 7
+Teller_8_location,Teller 8
+teller_line_location,Teller Line
+teller_side_location,Teller Side
+unknown_na_location,Unknown - N/A
+vault_location,Vault
+white_location,White
+yellow_location,Yellow

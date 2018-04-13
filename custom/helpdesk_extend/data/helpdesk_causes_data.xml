@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        
+        <record model="helpdesk.cause" id="add_delete_users_cause">
+          <field name="name">Add/Delete Users</field>
+        </record>
+        <record model="helpdesk.cause" id="added_alarm_componen_cause">
+          <field name="name">Added Alarm Componen</field>
+        </record>
+        <record model="helpdesk.cause" id="airline_has_leak_cause">
+          <field name="name">Airline Has Leak</field>
+        </record>
+        <record model="helpdesk.cause" id="alarm_battery_failed_cause">
+          <field name="name">Alarm Battery Failed</field>
+        </record>
+        <record model="helpdesk.cause" id="blower_motor_failed_cause">
+          <field name="name">Blower Motor Failed</field>
+        </record>
+        <record model="helpdesk.cause" id="blower_pack_failed_cause">
+          <field name="name">Blower Pack Failed</field>
+        </record>
+        <record model="helpdesk.cause" id="blown_fuse_cause">
+          <field name="name">Blown Fuse</field>
+        </record>
+        <record model="helpdesk.cause" id="breaker_tripped_cause">
+          <field name="name">Breaker Tripped</field>
+        </record>
+        <record model="helpdesk.cause" id="broken_carrier_cause">
+          <field name="name">Broken Carrier</field>
+        </record>
+        <record model="helpdesk.cause" id="cable_failure_cause">
+          <field name="name">Cable Failure</field>
+        </record>
+        <record model="helpdesk.cause" id="cable_wire_pinched_cause">
+          <field name="name">Cable/Wire Pinched</field>
+        </record>
+        <record model="helpdesk.cause" id="call_cancelled_cause">
+          <field name="name">Call Cancelled</field>
+        </record>
+        <record model="helpdesk.cause" id="camers_out_of_focus_cause">
+          <field name="name">Camers Out of Focus</field>
+        </record>
+        <record model="helpdesk.cause" id="carrier_not_latched_cause">
+          <field name="name">Carrier Not Latched</field>
+        </record>
+        <record model="helpdesk.cause" id="carrier_pen_in_latch_cause">
+          <field name="name">Carrier Pen in Latch</field>
+        </record>
+        <record model="helpdesk.cause" id="carrier_replacement_cause">
+          <field name="name">Carrier Replacement</field>
+        </record>
+        <record model="helpdesk.cause" id="cell_back_up_failed_cause">
+          <field name="name">Cell Back Up Failed</field>
+        </record>
+        <record model="helpdesk.cause" id="component_pcb_cause">
+          <field name="name">Component PCB</field>
+        </record>
+        <record model="helpdesk.cause" id="condensation_buildup_cause">
+          <field name="name">Condensation Buildup</field>
+        </record>
+        <record model="helpdesk.cause" id="could_not_duplicate_cause">
+          <field name="name">Could Not Duplicate</field>
+        </record>
+        <record model="helpdesk.cause" id="cust_cancelled_call_cause">
+          <field name="name">Cust Cancelled Call</field>
+        </record>
+        <record model="helpdesk.cause" id="cust_request_assist_cause">
+          <field name="name">Cust Request Assist</field>
+        </record>
+        <record model="helpdesk.cause" id="customer_education_cause">
+          <field name="name">Customer Education</field>
+        </record>
+        <record model="helpdesk.cause" id="customer_error_cause">
+          <field name="name">Customer Error</field>
+        </record>
+        <record model="helpdesk.cause" id="damaged_by_vendor_cause">
+          <field name="name">Damaged By Vendor</field>
+        </record>
+        <record model="helpdesk.cause" id="detect_switch_failed_cause">
+          <field name="name">Detect Switch Failed</field>
+        </record>
+        <record model="helpdesk.cause" id="dirt_grime_build_up_cause">
+          <field name="name">Dirt/Grime Build Up</field>
+        </record>
+        <record model="helpdesk.cause" id="diverter_failed_cause">
+          <field name="name">Diverter Failed</field>
+        </record>
+        <record model="helpdesk.cause" id="door_seals_worn_cause">
+          <field name="name">Door Seals Worn</field>
+        </record>
+        <record model="helpdesk.cause" id="doormotorctrl_failed_cause">
+          <field name="name">DoorMotorCtrl Failed</field>
+        </record>
+        <record model="helpdesk.cause" id="elect_switch_pad_cause">
+          <field name="name">Elect Switch/Pad</field>
+        </record>
+        <record model="helpdesk.cause" id="electrical_sensor_cause">
+          <field name="name">Electrical Sensor</field>
+        </record>
+        <record model="helpdesk.cause" id="extreme_weather_cause">
+          <field name="name">Extreme Weather</field>
+        </record>
+        <record model="helpdesk.cause" id="foreign_object_debris_cause">
+          <field name="name">ForeignObject/Debris</field>
+        </record>
+        <record model="helpdesk.cause" id="handset_cord_worn_cause">
+          <field name="name">Handset Cord Worn</field>
+        </record>
+        <record model="helpdesk.cause" id="installation_job_cause">
+          <field name="name">Installation Job</field>
+        </record>
+        <record model="helpdesk.cause" id="leak_undergrnd_tube_cause">
+          <field name="name">Leak Undergrnd Tube</field>
+        </record>
+        <record model="helpdesk.cause" id="loose_connection_cause">
+          <field name="name">Loose Connection</field>
+        </record>
+        <record model="helpdesk.cause" id="misuse_abuse_cause">
+          <field name="name">Misuse / Abuse</field>
+        </record>
+        <record model="helpdesk.cause" id="normal_wear_n_tear_cause">
+          <field name="name">Normal Wea N Tear</field>
+        </record>
+        <record model="helpdesk.cause" id="not_comco_equipment_cause">
+          <field name="name">Not ComCo Equipment</field>
+        </record>
+        <record model="helpdesk.cause" id="not_responding_cause">
+          <field name="name">Not Responding</field>
+        </record>
+        <record model="helpdesk.cause" id="offline_unplugged_cause">
+          <field name="name">Offline / Unplugged</field>
+        </record>
+        <record model="helpdesk.cause" id="overfill_w_prescript_cause">
+          <field name="name">Overfill w/Prescript</field>
+        </record>
+        <record model="helpdesk.cause" id="pcb_failure_cause">
+          <field name="name">PCB Failure</field>
+        </record>
+        <record model="helpdesk.cause" id="pharmacy_error_cause">
+          <field name="name">Pharmacy Error</field>
+        </record>
+        <record model="helpdesk.cause" id="phone_line_trouble_cause">
+          <field name="name">Phone Line Trouble</field>
+        </record>
+        <record model="helpdesk.cause" id="power_source_failure_cause">
+          <field name="name">Power Source Failure</field>
+        </record>
+        <record model="helpdesk.cause" id="power_supply_failed_cause">
+          <field name="name">Power Supply Failed</field>
+        </record>
+        <record model="helpdesk.cause" id="preventative_maint_cause">
+          <field name="name">Preventative Maint</field>
+        </record>
+        <record model="helpdesk.cause" id="replaced_alarm_comp_cause">
+          <field name="name">Replaced Alarm Comp</field>
+        </record>
+        <record model="helpdesk.cause" id="reprogram_cause">
+          <field name="name">Reprogram</field>
+        </record>
+        <record model="helpdesk.cause" id="rodent_pest_damage_cause">
+          <field name="name">Rodent-Pest Damage</field>
+        </record>
+        <record model="helpdesk.cause" id="routine_maintenance_cause">
+          <field name="name">Routine Maintenance</field>
+        </record>
+        <record model="helpdesk.cause" id="safety_bar_misalignd_cause">
+          <field name="name">Safety Bar Misalignd</field>
+        </record>
+        <record model="helpdesk.cause" id="safety_switch_failed_cause">
+          <field name="name">Safety Switch Failed</field>
+        </record>
+        <record model="helpdesk.cause" id="separated_tube_joint_cause">
+          <field name="name">Separated Tube Joint</field>
+        </record>
+        <record model="helpdesk.cause" id="setting_off_cause">
+          <field name="name">Setting off</field>
+        </record>
+        <record model="helpdesk.cause" id="store_hours_changed_cause">
+          <field name="name">Store Hours Changed</field>
+        </record>
+        <record model="helpdesk.cause" id="stripped_out_cause">
+          <field name="name">Stripped Out</field>
+        </record>
+        <record model="helpdesk.cause" id="system_turned_off_cause">
+          <field name="name">System Turned Off</field>
+        </record>
+        <record model="helpdesk.cause" id="teller_error_cause">
+          <field name="name">Teller Error</field>
+        </record>
+        <record model="helpdesk.cause" id="timelock_over_wound_cause">
+          <field name="name">Timelock Over Wound</field>
+        </record>
+        <record model="helpdesk.cause" id="upgrade_required_cause">
+          <field name="name">Upgrade Required</field>
+        </record>
+        <record model="helpdesk.cause" id="vandalism_by_custome_cause">
+          <field name="name">Vandalism By Custome</field>
+        </record>
+        <record model="helpdesk.cause" id="wear_bands_worn_cause">
+          <field name="name">Wear Bands Worn</field>
+        </record>
+        <record model="helpdesk.cause" id="wobble_switch_failed_cause">
+          <field name="name">Wobble Switch Failed</field>
+        </record>
+        
+    </data>
+</odoo>

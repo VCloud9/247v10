@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id="sale_subscription_view_form_inherit_helpdesk" model="ir.ui.view">
+        <field name="name">sale.subscription.form.inherit</field>
+        <field name="model">sale.subscription</field>
+        <field name="inherit_id" ref="sale_contract.sale_subscription_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//form/sheet/div[@name='button_box']/button[1]" position="after">
+                <button string="Helpdesks" class="oe_stat_button" name="action_view_tickets" type="object" icon="fa-truck">
+                </button>
+            </xpath>
+            <xpath expr="//form/sheet/notebook/page[last()]" position="before">
+                <page string="Assets Under Contract" id="equipment_subscription_line_ids">
+                    <field name="equipment_subscription_line_ids">
+                        <tree string="Equipments" editable="True">
+                            <field name="product_id"/>
+                            <field name="product_uom_qty"/>
+                            <field name="product_uom_id"/>
+                            <field name="site_id"/>
+                            <field name="serial_number"/>
+                        </tree>
+                    </field>
+                </page>
+            </xpath>
+            <xpath expr="//form/sheet/notebook/page[@id='settings']" position="after">
+                <page string="Project" id="project_id">
+                    <group>
+                        <group>
+                          <field name="project_ids" nolabel="1" colspan="4" readonly="1"/>
+                        </group>
+                        <group/>
+                    </group>
+                </page>
+            </xpath>
+            <xpath expr="//form/sheet/group/group[2]/field[7]" position="after">
+                <field name="product_ids" widget="many2many_tags" invisible="1"/>
+                <field name="serial_number"  invisible="1"/>
+                <field name="parent_id" readonly="1"/>
+            </xpath>
+             <xpath expr="//form/sheet/notebook/page[last()]" position="after">
+                 <page string="Terms and Conditions">
+                    <group>
+                        <field name="term_and_condition" nolabel="1"/>
+                    </group>
+                </page>
+            </xpath>
+            <xpath expr="//form/sheet/notebook" position="after">
+                <label for="signature"/>
+                <h2>
+                    <field name="signature" widget="signature"/>
+                </h2>
+                <group>
+                    <group>
+                        <field name="signed_by" />
+                        <field name="signature_date" />
+                    </group>
+                 </group>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="sale_subscription_view_list_inherit_helpdesk" model="ir.ui.view">
+        <field name="name">sale.subscription.list.inherit</field>
+        <field name="model">sale.subscription</field>
+        <field name="inherit_id" ref="sale_contract.sale_subscription_view_list"/>
+        <field name="arch" type="xml">
+            <xpath expr="//tree/field[@name='pricelist_id']" position="before">
+                <field name="product_ids" widget="many2many_tags"/>
+                <field name="serial_number" />
+            </xpath>
+        </field>
+    </record>
+
+    <record id="sale_subscription_view_search_inherit_helpdesk" model="ir.ui.view">
+        <field name="name">sale.subscription.search.inherit</field>
+        <field name="model">sale.subscription</field>
+        <field name="inherit_id" ref="sale_contract.sale_subscription_view_search"/>
+        <field name="arch" type="xml">
+            <xpath expr="//search/field[@name='name']" position="after">
+                <field name="product_ids" />
+                <field name="serial_number" />
+                <field name="project_ids"/>
+                <field name="parent_id"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="sale_subscription_template_view_form_inherit_term" model="ir.ui.view">
+        <field name="name">sale.subscription.form.inherit</field>
+        <field name="model">sale.subscription.template</field>
+        <field name="inherit_id" ref="sale_contract.sale_subscription_template_view_form"/>
+        <field name="arch" type="xml">
+             <xpath expr="//form/sheet/notebook/page[last()]" position="after">
+                 <page string="Terms and Conditions">
+                    <group>
+                        <field name="term_and_condition" nolabel="1"/>
+                    </group>
+                </page>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

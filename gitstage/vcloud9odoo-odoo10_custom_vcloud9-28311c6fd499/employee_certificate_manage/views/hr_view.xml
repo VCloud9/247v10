@@ -1,0 +1,34 @@
+<openerp>
+    <data>
+
+    <record model="ir.ui.view" id="view_employee_form_inerit_certificates">
+        <field name="name">hr.employee.form.inherit.certificates</field>
+        <field name="model">hr.employee</field>
+        <field name="inherit_id" ref="hr.view_employee_form" />
+        <field name="arch" type="xml">
+            <xpath expr="//form/sheet/notebook" position="inside">
+                    <page string="Certificates" name="certificates">
+                        <group>
+                            <field context="{'default_employee_id': active_id}" name="certificate_ids" nolabel="1">
+                                <tree editable="bottom">
+                                    <field name="certificate_id" />
+                                    <field name="employee_id" context="{'default_employee_id': employee_id}"/>
+                                    <field name="partner_id"/>
+                                    <field name="certification_date"/>
+                                    <field name="certfication_exp_date"/>
+                                    <field name="first_days_reminder"/>
+                                    <field name="second_days_reminder"/>
+                                    <field name="first_reminder_date"/>
+                                    <field name="second_reminder_date"/>
+                                    <field name="company_id" groups="base.group_multi_company"/>
+                                    <field name="user_id"/>
+                                </tree>
+                            </field>
+                        </group>
+                    </page>
+            </xpath>
+        </field>
+    </record>
+
+   </data>
+</openerp>

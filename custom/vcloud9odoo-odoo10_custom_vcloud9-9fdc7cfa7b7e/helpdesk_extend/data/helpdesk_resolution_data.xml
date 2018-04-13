@@ -1,0 +1,166 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        
+        <record model="helpdesk.resolution" id="adjusted_door_arm_resolution">
+          <field name="name">Adjusted Door Arm</field>
+        </record>
+        <record model="helpdesk.resolution" id="adjusted_safety_bar_resolution">
+          <field name="name">Adjusted Safety Bar</field>
+        </record>
+        <record model="helpdesk.resolution" id="adjusted_teller_door_resolution">
+          <field name="name">Adjusted Teller Door</field>
+        </record>
+        <record model="helpdesk.resolution" id="call_cancelled_resolution">
+          <field name="name">Call Cancelled</field>
+        </record>
+        <record model="helpdesk.resolution" id="check_inspect_system_resolution">
+          <field name="name">Check/Inspect System</field>
+        </record>
+        <record model="helpdesk.resolution" id="clean_out_carrier_resolution">
+          <field name="name">Clean Out Carrier</field>
+        </record>
+        <record model="helpdesk.resolution" id="combo_change_resolution">
+          <field name="name">Combo Change</field>
+        </record>
+        <record model="helpdesk.resolution" id="could_not_duplicate_resolution">
+          <field name="name">Could Not Duplicate</field>
+        </record>
+        <record model="helpdesk.resolution" id="customer_education_resolution">
+          <field name="name">Customer Education</field>
+        </record>
+        <record model="helpdesk.resolution" id="decline_part_replacemt_resolution">
+          <field name="name">DeclinePartReplacemt</field>
+        </record>
+        <record model="helpdesk.resolution" id="extracted_carrier_resolution">
+          <field name="name">Extracted Carrier</field>
+        </record>
+        <record model="helpdesk.resolution" id="installation_job_resolution">
+          <field name="name">Installation Job</field>
+        </record>
+        <record model="helpdesk.resolution" id="made_adjustments_resolution">
+          <field name="name">Made Adjustments</field>
+        </record>
+        <record model="helpdesk.resolution" id="nd_head_pull_resolution">
+          <field name="name">ND Head Pull</field>
+        </record>
+        <record model="helpdesk.resolution" id="not_comco_eqpmnt_resolution">
+          <field name="name">Not ComCo Eqpmnt</field>
+        </record>
+        <record model="helpdesk.resolution" id="not_scope_of_work_resolution">
+          <field name="name">Not Scope of Work</field>
+        </record>
+        <record model="helpdesk.resolution" id="ordered_part_shipped_resolution">
+          <field name="name">Ordered/Part Shipped</field>
+        </record>
+        <record model="helpdesk.resolution" id="pending_cust_action_resolution">
+          <field name="name">Pending Cust Action</field>
+        </record>
+        <record model="helpdesk.resolution" id="pharm_retrvd_carrier_resolution">
+          <field name="name">Pharm Retrvd Carrier</field>
+        </record>
+        <record model="helpdesk.resolution" id="phone_fix_resolution">
+          <field name="name">Phone Fix</field>
+        </record>
+        <record model="helpdesk.resolution" id="powered_system_up_resolution">
+          <field name="name">Powered System Up</field>
+        </record>
+        <record model="helpdesk.resolution" id="preventative_maint_resolution">
+          <field name="name">Preventative Maint</field>
+        </record>
+        <record model="helpdesk.resolution" id="reinstall_reconnect_resolution">
+          <field name="name">Reinstall-Reconnect</field>
+        </record>
+        <record model="helpdesk.resolution" id="remove_dirt_build_up_resolution">
+          <field name="name">Remove Dirt Build Up</field>
+        </record>
+        <record model="helpdesk.resolution" id="removed_obstruction_resolution">
+          <field name="name">Removed Obstruction</field>
+        </record>
+        <record model="helpdesk.resolution" id="repair_recall_button_resolution">
+          <field name="name">Repair Recall Button</field>
+        </record>
+        <record model="helpdesk.resolution" id="repair_speaker_resolution">
+          <field name="name">Repair Speaker</field>
+        </record>
+        <record model="helpdesk.resolution" id="repair_call_button_wire_resolution">
+          <field name="name">RepairCallButtonWire</field>
+        </record>
+        <record model="helpdesk.resolution" id="repaired_board_resolution">
+          <field name="name">Repaired board</field>
+        </record>
+        <record model="helpdesk.resolution" id="repaired_mic_resolution">
+          <field name="name">Repaired mic</field>
+        </record>
+        <record model="helpdesk.resolution" id="repair_send_button_wire_resolution">
+          <field name="name">RepairSendButtonWire</field>
+        </record>
+        <record model="helpdesk.resolution" id="replace_blower_motor_resolution">
+          <field name="name">Replace Blower Motor</field>
+        </record>
+        <record model="helpdesk.resolution" id="replaced_audio_part_resolution">
+          <field name="name">Replaced audio part</field>
+        </record>
+        <record model="helpdesk.resolution" id="replaced_carrier_resolution">
+          <field name="name">Replaced Carrier</field>
+        </record>
+        <record model="helpdesk.resolution" id="replaced_part_resolution">
+          <field name="name">Replaced Part</field>
+        </record>
+        <record model="helpdesk.resolution" id="replaced_video_part_resolution">
+          <field name="name">Replaced video part</field>
+        </record>
+        <record model="helpdesk.resolution" id="replace_ups_pwr_suppl_resolution">
+          <field name="name">ReplaceUPS/PwrSuppl</field>
+        </record>
+        <record model="helpdesk.resolution" id="reseated_connections_resolution">
+          <field name="name">Reseated Connections</field>
+        </record>
+        <record model="helpdesk.resolution" id="reset_resolution">
+          <field name="name">Reset</field>
+        </record>
+        <record model="helpdesk.resolution" id="reset_main_av_pwr_resolution">
+          <field name="name">Reset Main AV Pwr</field>
+        </record>
+        <record model="helpdesk.resolution" id="resolved_no_parts_resolution">
+          <field name="name">Resolved-No Parts</field>
+        </record>
+        <record model="helpdesk.resolution" id="resolved_part_sent_resolution">
+          <field name="name">Resolved-Part Sent</field>
+        </record>
+        <record model="helpdesk.resolution" id="resolved_parts_used_resolution">
+          <field name="name">Resolved-Parts Used</field>
+        </record>
+        <record model="helpdesk.resolution" id="resolved_stock_parts_resolution">
+          <field name="name">Resolved-Stock Parts</field>
+        </record>
+        <record model="helpdesk.resolution" id="retrieved_carrier_resolution">
+          <field name="name">Retrieved Carrier</field>
+        </record>
+        <record model="helpdesk.resolution" id="retrived_open_carrie_resolution">
+          <field name="name">Retrived Open Carrie</field>
+        </record>
+        <record model="helpdesk.resolution" id="retrvd_overfill_carr_resolution">
+          <field name="name">Retrvd Overfill Carr</field>
+        </record>
+        <record model="helpdesk.resolution" id="teller_retrvd_carrie_resolution">
+          <field name="name">Teller Retrvd Carrie</field>
+        </record>
+        <record model="helpdesk.resolution" id="training_turnover_resolution">
+          <field name="name">Training &amp; Turnover</field>
+        </record>
+        <record model="helpdesk.resolution" id="repaired_lock_resolution">
+          <field name="name">Repaired Lock</field>
+        </record>
+        <record model="helpdesk.resolution" id="drilled_picked_lock_resolution">
+          <field name="name">Drilled/Picked Lock</field>
+        </record>
+        <record model="helpdesk.resolution" id="rotated_locks_resolution">
+          <field name="name">Rotated Locks</field>
+        </record>
+        <record model="helpdesk.resolution" id="duplicated_keys_resolution">
+          <field name="name">Duplicated Keys</field>
+        </record>
+        
+    </data>
+</odoo>

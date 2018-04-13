@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        
+        <record model="helpdesk.location" id="alarm_dvr_location">
+          <field name="name">Alarm/DVR</field>
+        </record>
+        <record model="helpdesk.location" id="all_equipment_location">
+          <field name="name">All Equipment</field>
+        </record>
+        <record model="helpdesk.location" id="all_units_location">
+          <field name="name">All Units</field>
+        </record>
+        <record model="helpdesk.location" id="black_location">
+          <field name="name">Black</field>
+        </record>
+        <record model="helpdesk.location" id="black_red_location">
+          <field name="name">Black &amp; Red</field>
+        </record>
+        <record model="helpdesk.location" id="blue_location">
+          <field name="name">Blue</field>
+        </record>
+        <record model="helpdesk.location" id="blue_red_location">
+          <field name="name">Blue &amp; Red</field>
+        </record>
+        <record model="helpdesk.location" id="brown_location">
+          <field name="name">Brown</field>
+        </record>
+        <record model="helpdesk.location" id="cancelled_location">
+          <field name="name">Cancelled</field>
+        </record>
+        <record model="helpdesk.location" id="cash_safe_location">
+          <field name="name">Cash Safe</field>
+        </record>
+        <record model="helpdesk.location" id="cctv_lanex_biometrix_location">
+          <field name="name">CCTV/Lanex/Biometrix</field>
+        </record>
+        <record model="helpdesk.location" id="commercial_location">
+          <field name="name">Commercial</field>
+        </record>
+        <record model="helpdesk.location" id="consultation_station_location">
+          <field name="name">Consultation Station</field>
+        </record>
+        <record model="helpdesk.location" id="drive_thru_location">
+          <field name="name">Drive Thru</field>
+        </record>
+        <record model="helpdesk.location" id="drive_thru_atm_location">
+          <field name="name">Drive Thru ATM</field>
+        </record>
+        <record model="helpdesk.location" id="gray_location">
+          <field name="name">Gray</field>
+        </record>
+        <record model="helpdesk.location" id="green_location">
+          <field name="name">Green</field>
+        </record>
+        <record model="helpdesk.location" id="installation_job_location">
+          <field name="name">Installation Job</field>
+        </record>
+        <record model="helpdesk.location" id="lane_1_location">
+          <field name="name">Lane 1</field>
+        </record>
+        <record model="helpdesk.location" id="lane_10_location">
+          <field name="name">Lane 10</field>
+        </record>
+        <record model="helpdesk.location" id="lane_11_location">
+          <field name="name">Lane 11</field>
+        </record>
+        <record model="helpdesk.location" id="lane_12_location">
+          <field name="name">Lane 12</field>
+        </record>
+        <record model="helpdesk.location" id="lane_2_location">
+          <field name="name">Lane 2</field>
+        </record>
+        <record model="helpdesk.location" id="lane_3_location">
+          <field name="name">Lane 3</field>
+        </record>
+        <record model="helpdesk.location" id="lane_4_location">
+          <field name="name">Lane 4</field>
+        </record>
+        <record model="helpdesk.location" id="lane_5_location">
+          <field name="name">Lane 5</field>
+        </record>
+        <record model="helpdesk.location" id="lane_6_location">
+          <field name="name">Lane 6</field>
+        </record>
+        <record model="helpdesk.location" id="lane_7_location">
+          <field name="name">Lane 7</field>
+        </record>
+        <record model="helpdesk.location" id="lane_8_location">
+          <field name="name">Lane 8</field>
+        </record>
+        <record model="helpdesk.location" id="lane_9_location">
+          <field name="name">Lane 9</field>
+        </record>
+        <record model="helpdesk.location" id="lobby_location">
+          <field name="name">Lobby</field>
+        </record>
+        <record model="helpdesk.location" id="lobby_atm_location">
+          <field name="name">Lobby ATM</field>
+        </record>
+        <record model="helpdesk.location" id="multiple_units_location">
+          <field name="name">Multiple Units</field>
+        </record>
+        <record model="helpdesk.location" id="night_drop_location">
+          <field name="name">Night Drop</field>
+        </record>
+        <record model="helpdesk.location" id="orange_location">
+          <field name="name">Orange</field>
+        </record>
+        <record model="helpdesk.location" id="pharmacy_side_location">
+          <field name="name">Pharmacy Side</field>
+        </record>
+        <record model="helpdesk.location" id="point_to_point_div_location">
+          <field name="name">Point To Point / Div</field>
+        </record>
+        <record model="helpdesk.location" id="preventative_main_location">
+          <field name="name">Preventative Main</field>
+        </record>
+        <record model="helpdesk.location" id="promo_video_location">
+          <field name="name">Promo Video</field>
+        </record>
+        <record model="helpdesk.location" id="purple_location">
+          <field name="name">Purple</field>
+        </record>
+        <record model="helpdesk.location" id="red_location">
+          <field name="name">Red</field>
+        </record>
+        <record model="helpdesk.location" id="remote_atm_location">
+          <field name="name">Remote ATM</field>
+        </record>
+        <record model="helpdesk.location" id="Teller_1_location">
+          <field name="name">Teller 1</field>
+        </record>
+        <record model="helpdesk.location" id="Teller_2_location">
+          <field name="name">Teller 2</field>
+        </record>
+        <record model="helpdesk.location" id="Teller_3_location">
+          <field name="name">Teller 3</field>
+        </record>
+        <record model="helpdesk.location" id="Teller_4_location">
+          <field name="name">Teller 4</field>
+        </record>
+        <record model="helpdesk.location" id="Teller_5_location">
+          <field name="name">Teller 5</field>
+        </record>
+        <record model="helpdesk.location" id="Teller_6_location">
+          <field name="name">Teller 6</field>
+        </record>
+        <record model="helpdesk.location" id="Teller_7_location">
+          <field name="name">Teller 7</field>
+        </record>
+        <record model="helpdesk.location" id="Teller_8_location">
+          <field name="name">Teller 8</field>
+        </record>
+        <record model="helpdesk.location" id="teller_line_location">
+          <field name="name">Teller Line</field>
+        </record>
+        <record model="helpdesk.location" id="teller_side_location">
+          <field name="name">Teller Side</field>
+        </record>
+        <record model="helpdesk.location" id="unknown_na_location">
+          <field name="name">Unknown - N/A</field>
+        </record>
+        <record model="helpdesk.location" id="vault_location">
+          <field name="name">Vault</field>
+        </record>
+        <record model="helpdesk.location" id="white_location">
+          <field name="name">White</field>
+        </record>
+        <record model="helpdesk.location" id="yellow_location">
+          <field name="name">Yellow</field>
+        </record>
+       
+        
+    </data>
+</odoo>

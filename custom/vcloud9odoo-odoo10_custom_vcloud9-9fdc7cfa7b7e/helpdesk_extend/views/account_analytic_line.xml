@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="view_account_analytic_line_tree_work_type_tree_help" model="ir.ui.view">
+            <field name="name">Line creation and edition from grid Work Type</field>
+            <field name="model">account.analytic.line</field>
+            <field name="inherit_id" ref="analytic.view_account_analytic_line_tree"/>
+            <field name="arch" type="xml">
+                <field name="name" position="after">
+                    <field name="helpdesk_id"/>
+                </field>
+            </field>
+        </record>
+        <record id="view_account_analytic_line_tree_work_type_form_help" model="ir.ui.view">
+            <field name="name">Line creation and edition from grid Work Type</field>
+            <field name="model">account.analytic.line</field>
+            <field name="inherit_id" ref="analytic.view_account_analytic_line_form"/>
+            <field name="arch" type="xml">
+                <field name="name" position="after">
+                    <field name="helpdesk_id"/>
+                </field>
+            </field>
+        </record>
+        
+        <record id="view_timesheet_form_work_type_help" model="ir.ui.view">
+            <field name="name">Line creation and edition from grid Work Type</field>
+            <field name="model">account.analytic.line</field>
+            <field name="inherit_id" ref="timesheet_grid.view_timesheet_form"/>
+            <field name="arch" type="xml">
+                <field name="task_id" position="after">
+                    <field name="helpdesk_id"/>
+                </field>
+            </field>
+        </record>
+        
+        <record id="hr_timesheet_sheet_form_inherit_rate_help" model="ir.ui.view">
+            <field name="name">hr_timesheet_sheet.sheet.inherit.rate</field>
+            <field name="model">hr_timesheet_sheet.sheet</field>
+            <field name="inherit_id" ref="hr_timesheet_sheet.hr_timesheet_sheet_form"/>
+            <field name="arch" type="xml">
+                <xpath expr="//form/sheet/notebook/page[2]/field/tree/field[@name='unit_amount']"
+                    position="before">
+                    <field name="helpdesk_id"/>
+                </xpath>
+            </field>
+        </record>
+        
+        <record id="hr_timesheet_line_tree_inherit_rate_help" model="ir.ui.view">
+            <field name="name">account.analytic.line.inherit.rate</field>
+            <field name="model">account.analytic.line</field>
+            <field name="inherit_id" ref="hr_timesheet.hr_timesheet_line_tree"/>
+            <field name="arch" type="xml">
+                <field name="task_id" position="after">
+                    <field name="helpdesk_id"/>
+                </field>
+            </field>
+        </record>
+        
+        <record id="hr_timesheet_line_search_inherit_rate_help" model="ir.ui.view">
+            <field name="name">account.analytic.line.inherit.rate</field>
+            <field name="model">account.analytic.line</field>
+            <field name="inherit_id" ref="hr_timesheet.hr_timesheet_line_search"/>
+            <field name="arch" type="xml">
+                <field name="name" position="after">
+                    <field name="helpdesk_id"/>
+                </field>
+            </field>
+        </record>
+        
+    </data>
+</odoo>
